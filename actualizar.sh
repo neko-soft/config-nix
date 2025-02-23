@@ -3,11 +3,23 @@
 # Directorio donde se clonaron los dotfiles
 DOTFILES_DIR="$HOME/config-nix"
 
+echo "🔹 Copiando dotfiles desde $DOTFILES_DIR..."
+
 # Archivos y carpetas a copiar
 FILES=(
     ".bashrc"
     "Kath.png"
 )
+
+# Este copia los archivos sueltos que van en $HOME
+for file in "${FILES[@]}"; do
+    src="$DOTFILES_DIR/$file"
+    dest="$HOME/$file"
+
+    cp "$src" "$dest"
+
+    echo "✅ Copiado: $dest"
+done
 
 CONFIGDIR=(
     "kitty"
@@ -17,11 +29,7 @@ CONFIGDIR=(
     "waybar"
 )
 
-
-
-# Crear backup y copiar archivos/carpetas
-echo "🔹 Copiando dotfiles desde $DOTFILES_DIR..."
-
+# Este copia principalmente los directorios que van al ~/.config
 for folder in "${CONFIGDIR[@]}"; do
     src="$DOTFILES_DIR/$folder"
     dest="$HOME/.config"
@@ -36,26 +44,5 @@ sudo cp -r "$DOTFILES_DIR/nixos" "/etc"
 echo "✅ Copiado: /etc/nixos"
 
 
-
-
-#for file in "${FILES[@]}"; do
-#    src="$DOTFILES_DIR/$file"
-#    dest="$HOME/$file"
-
-    # Verificar si el archivo/carpeta existe en el destino
-#    if [ -e "$dest" ] || [ -d "$dest" ]; then
-#        echo "📌 Backup creado: $dest.bak"
-#        mv "$dest" "$dest.bak"
-#    fi
-
-#     Si es un directorio, copiar con -r
-#    if [ -d "$src" ]; then
-#        cp -r "$src" "$dest"
-#    else
-#        cp "$src" "$dest"
-#    fi
-
-#    echo "✅ Copiado: $file"
-#done
 
 echo "🎉 Dotfiles instalados con éxito."
