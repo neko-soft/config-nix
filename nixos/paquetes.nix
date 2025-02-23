@@ -125,6 +125,17 @@
 	programs.virt-manager.enable = true;
 
 
+	# Para SSH en GitHub
+
+	programs.ssh = {
+		startAgent = true;
+		extraConfig = ''
+			Host *
+				AddKeysToAgent yes
+				IdentityFIle ~/.ssh/id_ed25519_signing
+		'';
+	};
+
 	# Permite algunos paquetes inseguros que son necesarios para algunas cosas
 	nixpkgs.config.permittedInsecurePackages = [
 		"electron-25.0.0"
