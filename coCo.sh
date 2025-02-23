@@ -24,7 +24,7 @@ echo "📂 Copiando configuraciones a $DEST ..."
 for DIR in "${CONFIG_DIRS[@]}"; do
     if [ -d "$DIR" ]; then
         cp -r "$DIR" "$DEST"
-        echo "✅ Carpeta copiada: $DIR"
+        echo "📂 Carpeta copiada: $DIR"
     else
         echo "❌ Carpeta no encontrada: $DIR"
     fi
