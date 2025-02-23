@@ -48,7 +48,7 @@ echo "✅ Copia completada."
 # Subir cambios a GitHub
 cd "$DEST"
 git add .
-git commit -m "Copia automática de dotfiles"
+git commit -S -m "Copia automática de dotfiles"
 git push origin main
 
 #echo "🚀 Dotfiles subidos a GitHub."
