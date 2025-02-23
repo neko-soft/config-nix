@@ -24,7 +24,7 @@ echo "🔹 Copiando dotfiles desde $DOTFILES_DIR..."
 
 for folder in "${CONFIGDIR[@]}"; do
     src="$DOTFILES_DIR/$folder"
-    dest="$HOME/tomate"
+    dest="$HOME/.config"
 
     cp -r "$src" "$dest"
 
@@ -32,8 +32,8 @@ for folder in "${CONFIGDIR[@]}"; do
 done
 
 # Este copia los archivos de NixOS
-sudo cp -r "$DOTFILES_DIR/nixos" "$HOME/tomate"
-echo "✅ Copiado: /etc/tomate/nixos"
+sudo cp -r "$DOTFILES_DIR/nixos" "/etc"
+echo "✅ Copiado: /etc/nixos"
 
 
 
