@@ -132,7 +132,7 @@
 		extraConfig = ''
 			Host *
 				AddKeysToAgent yes
-				IdentityFIle ~/.ssh/id_ed25519_signing
+				IdentityFile ~/.ssh/id_ed25519_signing
 		'';
 	};
 
