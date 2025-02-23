@@ -25,7 +25,7 @@
 		# Programas Creativos		
 		#reaper
 		#davinci-resolve
-		krita
+		#krita
 		#davinci-resolve-studio
 
 		# Terminal y Kitty
