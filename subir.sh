@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Este script es para copiar los archivos de configuración actuales del sistema
+# y subirlos a git
+
 # Lista de carpetas y archivos a respaldar
 CONFIG_DIRS=(
     "$HOME/.config/hypr"

@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+
+# Este script es para copiar los archivos clonados
+# del git hacia el sistema
+
 # Directorio donde se clonaron los dotfiles
 DOTFILES_DIR="$HOME/config-nix"
 
