@@ -130,8 +130,9 @@
 	programs.ssh = {
 		startAgent = true;
 		extraConfig = ''
-			Host *
+			Host github.com
 				AddKeysToAgent yes
+				IdentityFile ~/.ssh/id_ed25519
 				IdentityFile ~/.ssh/id_ed25519_signing
 		'';
 	};
