@@ -80,7 +80,9 @@
 		#clang
 		#openssl
 		#boost
-
+	
+		# Home-Manager
+		home-manager
 
 		# Extras		
 		#polkit
