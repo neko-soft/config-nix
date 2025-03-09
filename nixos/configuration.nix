@@ -15,10 +15,13 @@
 		./networkAndHost.nix
 		#./nvidia.nix
 		./inestables.nix
+    		./servicios.nix
     ];
 
 
   boot.initrd.luks.devices."luks-a1ebf852-7aee-47ef-b5c7-54392bb7485b".device = "/dev/disk/by-uuid/a1ebf852-7aee-47ef-b5c7-54392bb7485b";
+
+	#nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

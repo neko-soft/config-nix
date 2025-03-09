@@ -36,6 +36,7 @@
 		neo-cowsay
 		fortune-kind
 		pipes
+		nsnake
 		cava
 		sl
 		cbonsai
@@ -71,6 +72,15 @@
 		win-virtio
 		win-spice
 		swtpm
+		
+		# Develop y Compilar
+		#cmake
+		#gnumake
+		#libgcc
+		#clang
+		#openssl
+		#boost
+
 
 		# Extras		
 		#polkit
@@ -123,6 +133,13 @@
 	};
 	services.spice-vdagentd.enable = true;
 	programs.virt-manager.enable = true;
+
+	# Para MySQL
+
+	services.mysql = {
+		enable = true;
+		package = pkgs.mariadb;
+	};
 
 
 	# Para SSH en GitHub
