@@ -98,7 +98,9 @@
 
 
  	 ];
-#
+	#Home Manager
+	#programs.home-manager.enable = true;
+
 	# Power managment y weás
 	services.thermald.enable = true;
 	powerManagement.enable = true;
