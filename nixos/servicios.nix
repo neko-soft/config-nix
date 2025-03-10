@@ -56,14 +56,14 @@ systemd.services.ac-worldserver = {
   
 systemd.user.services.hyprland-reload = {
   description = "Reload Hyprland after nixos-rebuild switch";
-  after = [ "graphical.target" ];
+  after = [ "graphical-session.target" ];
   wantedBy = [ "default.target" ];
   serviceConfig = {
-    User = "nekonix";
-    WorkingDirectory = "/home/nekonix";
-    ExecStart = "./config-nix/refresco.sh";
-    Type = "oneshot";
-    RemainAfterExit = true;
+    Environment = "HYPRLAND_INSTANCE_SIGNATURE=12f9a0d0b93f691d4d9923716557154d74777b0a_1741629681_1843579763";
+    ExecStart = "/run/current-system/sw/bin/bash -c '/run/current-system/sw/bin/hyprpaper'";
+    Type = "simple";
+    Restart = "on-failure";
+    RestartSec = 5;
   };
 };
 
