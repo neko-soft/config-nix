@@ -59,7 +59,6 @@ systemd.user.services.hyprland-reload = {
   after = [ "graphical-session.target" ];
   wantedBy = [ "default.target" ];
   serviceConfig = {
-    Environment = "HYPRLAND_INSTANCE_SIGNATURE=12f9a0d0b93f691d4d9923716557154d74777b0a_1741629681_1843579763";
     ExecStart = "/run/current-system/sw/bin/bash -c '/run/current-system/sw/bin/hyprpaper'";
     Type = "simple";
     Restart = "on-failure";
