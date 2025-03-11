@@ -21,7 +21,7 @@
 	# Esto habilita Hyprland.
 	# Tener en cuenta que hay que agregar varias cosas si usas NVIDIA
 	programs.hyprland.enable = true;
-
+	
 	# Weás de impresora
 	services.printing.enable = false;
 

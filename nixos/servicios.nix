@@ -53,18 +53,8 @@ systemd.services.ac-worldserver = {
 };
 
 
-  
-systemd.user.services.hyprland-reload = {
-  description = "Reload Hyprland after nixos-rebuild switch";
-  after = [ "graphical-session.target" ];
-  wantedBy = [ "default.target" ];
-  serviceConfig = {
-    ExecStart = "/run/current-system/sw/bin/bash -c '/run/current-system/sw/bin/hyprpaper'";
-    Type = "simple";
-    Restart = "on-failure";
-    RestartSec = 5;
-  };
-};
+
+
 
 
 

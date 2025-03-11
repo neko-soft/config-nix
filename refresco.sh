@@ -2,14 +2,35 @@
 
 # La idea de este script es que actualice todas las cosas de hyprland, hyprpaper cada vez que se reconstruya el sistema. La idea es dejarlo como un servicio que se ejecute constantemente cuando se reconstruya todo.
 
-#hyprctl reload
-#/run/current-system/sw/bin/pkill hyprpaper
+echo "Monitoreando sudo nixos-rebuild switch..."
 
-# Esto es porque el pkill se demora un poco en matar el hyprpaper, así que espera hasta que realmente esté muerto antes de seguir, porque si no, te va a tirar un error que dice que no puedes tener varias instancias de hyprpaper al mismo tiempo.4
-#while pgrep -x hyprpaper >/dev/null; do
-#    sleep 0.1
-#done
+while true; do
+    # Verifica si el comando está corriendo como root
+    if pgrep -xaf "sudo nixos-rebuild switch" > /dev/null; then
+        echo "Detectado sudo nixos-rebuild switch, esperando a que termine..."
+        
+        # Esperar a que termine
+        while pgrep -xaf "sudo nixos-rebuild switch" > /dev/null; do
+            sleep 5
+        done
+        
+        echo "nixos-rebuild switch finalizado. Ejecutando comandos post-switch..."
+        
+        # Ejecutar Hyprland reload u otros comandos
+        hyprctl reload
+        pkill hyprpaper
 
-/run/current-system/sw/bin/hyprpaper &
-echo "Hello"
+        while pgrep -x "hyprpaper" > /dev/null; do
+            sleep 1
+            echo "Esperando que muera hyprpaper"
+        done
+        echo "Reiniciando Hyprpaper..."
+        hyprpaper &
+        echo "Hyprpaper reiniciado :D"
+        
+        echo "Comandos post-switch ejecutados."
+    fi
 
+    # Esperar antes de volver a verificar
+    sleep 10
+done

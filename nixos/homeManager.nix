@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   #programs.home-manager.enable = true;
@@ -48,6 +48,7 @@
         exec-once = waybar & firefox & hyprpaper & dunst
         exec-once = /nix/store/$(ls -la /nix/store | grep polkit-kde-agent | grep '^d' | awk '{print $9}' | head -n 1)/libexec/polkit-kde-authentication-agent-1
         exec-once = systemctl --user enable opentabletdriver.service --now
+        exec-once = /home/nekonix/config-nix/refresco.sh
 
 
         # Source a file (multi-file configs)
@@ -250,7 +251,13 @@
         #wallpaper = ,/home/nekonix/ThingsWeLike/GoldCan6955/Goldcan-1845630265236021630-0.jpg
       '';
       };
+
+     
+      wayland.windowManager.hyprland.systemd.variables = ["--all"];
+
     };
+
+      
   };
   
 }
