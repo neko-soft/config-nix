@@ -18,16 +18,23 @@ while true; do
         
         # Ejecutar Hyprland reload u otros comandos
         hyprctl reload
-        pkill hyprpaper
 
+        # Esto es para matar el proceso de hyprpaper, esperar que realmente esté muerto, y después reiniciarlo.
+        pkill hyprpaper
         while pgrep -x "hyprpaper" > /dev/null; do
-            sleep 1
+            sleep 0.5
             echo "Esperando que muera hyprpaper"
         done
-        echo "Reiniciando Hyprpaper..."
         hyprpaper &
-        echo "Hyprpaper reiniciado :D"
-        
+
+
+        # Esto es para matar el proceso de waybar, esperar que realmente esté muerto, y después reiniciarlo.
+        pkill waybar
+        while pgrep -x waybar >/dev/null; do
+            sleep 0.5
+        done
+        waybar &
+
         echo "Comandos post-switch ejecutados."
     fi
 
