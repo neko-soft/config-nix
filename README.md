@@ -6,7 +6,7 @@ También hay unos scrips que automatizan ciertos procesos.
 
 # Pendientes
 
-## Script `refresco.sh`
+## Script [[refresco.sh]]
 - [ ] Verificar primero si hay cambios en los archivos de hyprland, hyprpaper y waybar antes de ejecutar los comandos, para evitar recargas innecesarias.
 
 ## Script `actualizar.sh`
