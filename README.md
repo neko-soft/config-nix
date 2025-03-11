@@ -17,9 +17,9 @@ También hay unos scrips que automatizan ciertos procesos.
     - [ ] [servicios.nix](nixos/servicios.nix)
 
 ## Wallpapers
-- [ ] Hacer un script que permita cambiar el fondo de pantalla automáticamente de hyprland y/o GRUB. Esto tiene que hacerse cambiando las configuraciones de los archivos `homeManager.nix` (en la sección de `".config/hypr/hyprpaper.conf".text = ''`) y `bootLoader.nix`. Creo -pero no estoy seguro- que GRUB sólo admite formatos `.png`, así que el script debería ser capaz de convertir otros formatos a `.png`.
+- [ ] Hacer un script que permita cambiar el fondo de pantalla automáticamente de hyprland y/o GRUB. Esto tiene que hacerse cambiando las configuraciones de los archivos [homeManager.nix](nixos/homeManager.nix) (en la sección de `".config/hypr/hyprpaper.conf".text = ''`) y [bootLoader.nix](nixos/bootLoader.nix). Creo -pero no estoy seguro- que GRUB sólo admite formatos `.png`, así que el script debería ser capaz de convertir otros formatos a `.png`.
 
 ## Colores según Wallpaper
-- [ ] Hacer un script que cambie los colores de estilo y temas de kitty, hyprland, waybar, rofi, swaylock y GRUB según los colores del fondo de pantalla. Esto puede hacerse con un script que analice los colores de la imagen del wallpaper, y modificar los archivos `.nix` correspondientes (principalmente `homeManager.nix`y `bootLoader.nix`) para que todo tenga una armonía de colores.
+- [ ] Hacer un script que cambie los colores de estilo y temas de kitty, hyprland, waybar, rofi, swaylock y GRUB según los colores del fondo de pantalla. Esto puede hacerse con un script que analice los colores de la imagen del wallpaper, y modificar los archivos `.nix` correspondientes (principalmente [homeManager.nix](nixos/homeManager.nix)y [servicios.nix](nixos/servicios.nix)) para que todo tenga una armonía de colores.
 
 
