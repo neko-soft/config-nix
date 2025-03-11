@@ -9,12 +9,12 @@ También hay unos scrips que automatizan ciertos procesos.
 ## Script [refresco.sh](refresco.sh)
 - [ ] Verificar primero si hay cambios en los archivos de hyprland, hyprpaper y waybar antes de ejecutar los comandos, para evitar recargas innecesarias.
 
-## Script `actualizar.sh`
+## Script [actualizar.sh](actualizar.sh)
 - [ ] Este script antes funcionaba con los archivos .config, pero ahora se maneja todo desde el Home-Manager, así que hay varias cosas rebundantes.
 - [ ] Asegurarse de mantener la linea `boot.initrd.luks.devices` igual que está en el archivo original antes de reemplazar todo el resto.
 - [ ] Cambiar todos los archivos que tengan paths o referencias hacia el nombre de usuario por el nombre del usuario actual, porque ahora está todo con `nekonix`. Hasta donde se sabe, hay que cambiar estos archivos:
-    - [ ] `homeManager.nix`
-    - [ ] `servicios.nix`
+    - [ ] [homeManager.nix](nixos/homeManager.nix)
+    - [ ] [servicios.nix](nixos/servicios.nix)
 
 ## Wallpapers
 - [ ] Hacer un script que permita cambiar el fondo de pantalla automáticamente de hyprland y/o GRUB. Esto tiene que hacerse cambiando las configuraciones de los archivos `homeManager.nix` (en la sección de `".config/hypr/hyprpaper.conf".text = ''`) y `bootLoader.nix`. Creo -pero no estoy seguro- que GRUB sólo admite formatos `.png`, así que el script debería ser capaz de convertir otros formatos a `.png`.
