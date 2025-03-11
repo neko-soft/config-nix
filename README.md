@@ -6,6 +6,10 @@ También hay unos scrips que automatizan ciertos procesos.
 
 # Pendientes
 
+## Documentación
+- [ ] Explicar bien cómo funciona todo esto.
+- [ ] Ordenar mejor el [README.md](README.md). Agregar imágenes y emojis para que no sea una masa de texto que dan ganas de vomitar con sólo mirarla.
+
 ## Script [refresco.sh](refresco.sh)
 - [ ] Verificar primero si hay cambios en los archivos de hyprland, hyprpaper y waybar antes de ejecutar los comandos, para evitar recargas innecesarias.
 
