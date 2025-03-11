@@ -6,16 +6,17 @@
 # Lista de carpetas y archivos a respaldar
 CONFIG_DIRS=(
     #"$HOME/.config/hypr"
-    "$HOME/.config/rofi"
+    #"$HOME/.config/rofi"
     #"$HOME/.config/kitty"
     #"$HOME/.config/waybar"
     #"$HOME/.config/swaylock"
+    "$HOME/wallpapers"
     "/etc/nixos"
 )
 
 CONFIG_FILES=(
     "$HOME/.bashrc"
-    "$HOME/Kath.png"
+    "$HOME/wallpapers/Kath.png"
 )
 
 # Carpeta destino (tu repo de dotfiles)
@@ -33,7 +34,7 @@ for DIR in "${CONFIG_DIRS[@]}"; do
     fi
 done
 
-rm -rf $DEST/kitty/kitty-themes
+#rm -rf $DEST/kitty/kitty-themes
 rm $DEST/nixos/hardware-configuration.nix
 
 # Copiar archivos individuales
