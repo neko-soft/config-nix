@@ -7,7 +7,7 @@ También hay unos scrips que automatizan ciertos procesos.
 # Pendientes
 
 ## Documentación
-- [ ] Explicar bien cómo funciona todo esto.
+- [ ] Explicar bien cómo funciona todo esto. En resumen, se debería ejecuar el script [actualizar.sh](actualizar.sh) y listo. El propósito es poder reconstruir un sistema de NixOS con un solo script en vez de tener que configurar todo a mano.  
 - [ ] Ordenar mejor el [README.md](README.md). Agregar imágenes y emojis para que no sea una masa de texto que dan ganas de vomitar con sólo mirarla.
 
 ## Script [refresco.sh](refresco.sh)
