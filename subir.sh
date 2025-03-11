@@ -16,7 +16,6 @@ CONFIG_DIRS=(
 
 CONFIG_FILES=(
     "$HOME/.bashrc"
-    "$HOME/wallpapers/Kath.png"
 )
 
 # Carpeta destino (tu repo de dotfiles)

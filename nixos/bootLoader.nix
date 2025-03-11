@@ -14,7 +14,7 @@
 		efiSupport = true;
 		useOSProber = true;
 		default = 0;
-		splashImage = /home/nekonix/Kath.png;
+		splashImage = /home/nekonix/wallpapers/Kath.png;
 		};
 	};
 }

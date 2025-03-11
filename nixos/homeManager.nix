@@ -246,10 +246,8 @@
           }
         '';
         ".config/hypr/hyprpaper.conf".text = ''
-          preload = /home/nekonix/Kath.png
-          preload = /home/nekonix/ThingsWeLike/GoldCan6955/Goldcan-1845630265236021630-0.jpg
-          wallpaper = ,/home/nekonix/Kath.png
-          #wallpaper = ,/home/nekonix/ThingsWeLike/GoldCan6955/Goldcan-1845630265236021630-0.jpg
+          preload = ~/wallpapers/Kath.png
+          wallpaper = ,~/wallpapers/Kath.png
         '';
         # Configs Waybar
         ".config/waybar/config.jsonc".text = ''
