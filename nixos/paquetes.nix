@@ -84,6 +84,9 @@
 		# Home-Manager
 		home-manager
 
+		# Imágenes
+		imagemagick
+
 		# Extras		
 		#polkit
 		#polkit_gnome

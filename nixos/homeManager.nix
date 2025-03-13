@@ -150,7 +150,7 @@
           }
 
           misc { 
-              force_default_wallpaper = 0 # Set to 0 or 1 to disable the anime mascot wallpapers
+              force_default_wallpaper = ,/home/nekonix/wallpapers/Kath.png
               disable_hyprland_logo = true # If true disables the random hyprland logo / anime girl background. :(
           }
 
@@ -246,8 +246,8 @@
           }
         '';
         ".config/hypr/hyprpaper.conf".text = ''
-          preload = ~/wallpapers/Kath.png
-          wallpaper = ,~/wallpapers/Kath.png
+          preload = /home/nekonix/wallpapers/Kath.png
+          wallpaper = ,/home/nekonix/wallpapers/Kath.png
         '';
         # Configs Waybar
         ".config/waybar/config.jsonc".text = ''
