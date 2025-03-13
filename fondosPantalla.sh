@@ -128,3 +128,5 @@ else
 fi
 
 # No es neceseario reinicar hyprpaper, porque hay otro script que lo hace automáticamente después del nixos-rebuild switch
+
+
