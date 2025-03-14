@@ -3452,8 +3452,26 @@
 
       }; # Fin home.file
 
-     
-      wayland.windowManager.hyprland.systemd.variables = ["--all"];
+        wayland.windowManager.hyprland.systemd.variables = ["--all"];
+
+
+        programs.git = {
+          enable = true;
+          userName = "neko-soft";    # Cambia esto por tu nombre
+          userEmail = "rodrigo.pereira.riquelme@gmail.com";  # Cambia esto por tu correo de GitHub
+
+          # Configuración avanzada
+          extraConfig = {
+            init.defaultBranch = "main";  # Usa 'main' en lugar de 'master'
+            pull.rebase = true;           # Hace 'pull' con rebase en vez de merge
+            core.editor = "nvim";          # Usa nano como editor por defecto
+            credential.helper = "store";   # Guarda credenciales en ~/.git-credentials
+            http.postBuffer = 524288000;   # Aumenta el tamaño del buffer (500MB)
+          };
+
+          # Si quieres usar SSH con GitHub, puedes agregar tus claves
+          #signing.signByDefault = false;
+        };
 
     };
 
