@@ -17,7 +17,7 @@
 		thunderbird
 		obsidian
 		kitty
-		vscodium
+		vscode
 		xfce.thunar
 		neovim
 		#qbittorrent
@@ -86,6 +86,9 @@
 
 		# Imágenes
 		imagemagick
+
+		# Office
+		libreoffice-still
 
 		# Extras		
 		#polkit
