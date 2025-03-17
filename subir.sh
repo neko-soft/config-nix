@@ -54,5 +54,4 @@ git add .
 git commit -S -m "Copia automática de dotfiles"
 git push origin main
 
-####
 #echo "🚀 Dotfiles subidos a GitHub."
