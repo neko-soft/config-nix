@@ -3467,7 +3467,13 @@
             core.editor = "nvim";          # Usa nano como editor por defecto
             credential.helper = "store";   # Guarda credenciales en ~/.git-credentials
             http.postBuffer = 524288000;   # Aumenta el tamaño del buffer (500MB)
-          };
+            gpg.format = "ssh";
+	  };
+
+	  signing = {
+	  	key = "/home/nekonix/.ssh/id_ed25519_signing";
+		signByDefault = true;
+	};
 
           # Si quieres usar SSH con GitHub, puedes agregar tus claves
           #signing.signByDefault = false;
