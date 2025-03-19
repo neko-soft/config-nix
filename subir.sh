@@ -27,6 +27,7 @@ echo "📂 Copiando configuraciones a $DEST ..."
 for DIR in "${CONFIG_DIRS[@]}"; do
     if [ -d "$DIR" ]; then
         cp -r "$DIR" "$DEST"
+        cp -rL "$DIR" "$HOME/backups"
         echo "📂 Carpeta copiada: $DIR"
     else
         echo "❌ Carpeta no encontrada: $DIR"
@@ -53,5 +54,8 @@ cd "$DEST"
 git add .
 git commit -S -m "Copia automática de dotfiles"
 git push origin main
+
+
+
 
 #echo "🚀 Dotfiles subidos a GitHub."
