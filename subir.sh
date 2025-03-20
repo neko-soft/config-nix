@@ -26,7 +26,7 @@ echo "📂 Copiando configuraciones a $DEST ..."
 # Copiar carpetas completas
 for DIR in "${CONFIG_DIRS[@]}"; do
     if [ -d "$DIR" ]; then
-        cp -rL "$DIR" "$DEST"
+        sudo cp -rL "$DIR" "$DEST"
         echo "📂 Carpeta copiada: $DIR"
     else
         echo "❌ Carpeta no encontrada: $DIR"
