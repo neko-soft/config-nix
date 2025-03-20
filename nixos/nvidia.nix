@@ -12,7 +12,8 @@
   environment.systemPackages = with pkgs; [
     cudaPackages.cudatoolkit
     cudaPackages.cudnn
-
+    cudaPackages.cuda_cccl
+    cudaPackages.cuda_nvcc
   ];
 
 
@@ -36,7 +37,7 @@
     powerManagement.finegrained = false;
     open = false;
     nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
+    package = config.boot.kernelPackages.nvidiaPackages.production;
 
 
   };
