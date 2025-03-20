@@ -5,11 +5,11 @@
 
 # Lista de carpetas y archivos a respaldar
 CONFIG_DIRS=(
-    #1"$HOME/.config/hypr"
-    #"$HOME/.config/rofi"
-    #"$HOME/.config/kitty"
-    #"$HOME/.config/waybar"
-    #"$HOME/.config/swaylock"
+    "$HOME/.config/hypr"
+    "$HOME/.config/rofi"
+    "$HOME/.config/kitty"
+    "$HOME/.config/waybar"
+    "$HOME/.config/swaylock"
     "$HOME/wallpapers"
     "/etc/nixos"
 )
@@ -26,7 +26,7 @@ echo "📂 Copiando configuraciones a $DEST ..."
 # Copiar carpetas completas
 for DIR in "${CONFIG_DIRS[@]}"; do
     if [ -d "$DIR" ]; then
-        cp -r "$DIR" "$DEST"
+        cp -rL "$DIR" "$DEST"
         echo "📂 Carpeta copiada: $DIR"
     else
         echo "❌ Carpeta no encontrada: $DIR"

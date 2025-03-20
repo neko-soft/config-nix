@@ -103,7 +103,8 @@
 		adwaita-icon-theme
 		git
 		cachix
-
+		cudaPackages.cudatoolkit
+		cudaPackages.cudnn
 
  	 ];
 	#Home Manager

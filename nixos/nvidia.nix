@@ -6,7 +6,16 @@
 
 { 
 
+
  # Enable OpenGL
+
+  environment.systemPackages = with pkgs; [
+    cudaPackages.cudatoolkit
+    cudaPackages.cudnn
+
+  ];
+
+
   hardware.graphics.enable = true;
 
   # Load nvidia driver for Xorg and Wayland
@@ -16,8 +25,8 @@
 
     prime = {
             offload = {
-			    enable = true;
-			    enableOffloadCmd = true;
+			    enable = false;
+			    enableOffloadCmd = false;
 	    	};
         intelBusId = "PCI:0:2:0";
         nvidiaBusId = "PCI:1:0:0";
