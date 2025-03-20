@@ -17,6 +17,7 @@
 		./inestables.nix
     #./servicios.nix
 		<home-manager/nixos>
+		./cachix.nix
 		./homeManager.nix
     ];
 

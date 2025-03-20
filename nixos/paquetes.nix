@@ -52,6 +52,7 @@
 		wl-clipboard
 		grim
 		slurp
+		hyprpolkitagent
 
 		# Control de Hardware y weás
 		lm_sensors
@@ -101,6 +102,7 @@
 		os-prober
 		adwaita-icon-theme
 		git
+		cachix
 
 
  	 ];
