@@ -11,76 +11,34 @@
 	# List packages installed in system profile. To search, run:
 	# $ nix search wget
 	environment.systemPackages = with pkgs; [
-		# Aplicaciones básicas
-		firefox
-		spotify
-		thunderbird
-		obsidian
-		kitty
-		vscode
-		xfce.thunar
-		neovim
-		#qbittorrent
+		
 
+		# Aplicaciones básicas
+		firefox	spotify	thunderbird obsidian kitty vscode xfce.thunar neovim
+		
 		# Programas Creativos		
-		#reaper
-		#davinci-resolve
-		#krita
-		#davinci-resolve-studio
+		#reaper davinci-resolve krita
 
 		# Terminal y Kitty
-		fastfetch
-		asciiquarium
-		cmatrix
-		lf
-		neo-cowsay
-		fortune-kind
-		pipes
-		nsnake
-		cava
-		sl
-		cbonsai
+		fastfetch asciiquarium cmatrix lf neo-cowsay fortune-kind pipes
+		nsnake cava sl cbonsai
 		
 		# Hyprland y Desktop Environment
-		waybar
-		rofi-wayland
-		hyprpaper
-		dunst
-		libnotify
+		waybar rofi-wayland hyprpaper dunst libnotify
 		#wlogout
-		swaylock-effects
-		wl-clipboard
-		grim
-		slurp
-		hyprpolkitagent
+		swaylock-effects wl-clipboard grim slurp hyprpolkitagent
 
-		# Control de Hardware y weás
-		lm_sensors
-		pulseaudioFull
-		brightnessctl
-		lshw
-		openrgb-with-all-plugins
+		# Control de Hardware
+		lm_sensors pulseaudioFull brightnessctl	lshw
+		#openrgb-with-all-plugins
 
-		#lutris
-		bottles
-		ventoy-full
+		#lutris bottles ventoy-full
 
 		# Máquinas Virtuales
-		virt-viewer
-		spice
-		spice-gtk
-		spice-protocol
-		win-virtio
-		win-spice
-		swtpm
+		#virt-viewer spice spice-gtk spice-protocol win-virtio win-spice swtpm
 		
 		# Develop y Compilar
-		#cmake
-		#gnumake
-		#libgcc
-		#clang
-		#openssl
-		#boost
+		#cmake gnumake libgcc clang openssl boost
 	
 		# Home-Manager
 		home-manager
@@ -92,19 +50,9 @@
 		libreoffice-still
 
 		# Extras		
-		#polkit
-		#polkit_gnome
-		kdePackages.kirigami
-		gvfs		
-		unzip
-		nerdfonts		
-		ntfs3g
-		os-prober
-		adwaita-icon-theme
-		git
-		cachix
-		cudaPackages.cudatoolkit
-		cudaPackages.cudnn
+		#polkit polkit_gnome
+		kdePackages.kirigami gvfs unzip nerdfonts ntfs3g os-prober adwaita-icon-theme
+		git cachix
 
  	 ];
 	#Home Manager

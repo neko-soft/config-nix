@@ -49,7 +49,7 @@
           exec-once = waybar & firefox & hyprpaper & dunst
           #exec-once = /nix/store/$(ls -la /nix/store | grep polkit-kde-agent | grep '^d' | awk '{print $9}' | head -n 1)/libexec/polkit-kde-authentication-agent-1
           exec-once = systemctl --user enable opentabletdriver.service --now
-          exec-once = /home/nekonix/config-nix/refresco.sh
+          exec-once = /home/nekonix/proyectos/config-nix/refresco.sh
           exec-once = systemctl --user start hyprpolkitagent
 
           # Source a file (multi-file configs)
@@ -244,6 +244,13 @@
           debug {
               suppress_errors = true 
           }
+
+	  env = XDG_CURRENT_DESKTOP,Hyprland
+	  env = GTK_THEME,Adwaita:dark
+	  env = QT_STYLE_OVERRIDE,kvantum
+	  env = QT_QPA_PLATFORMTHEME,qt5ct
+	  env = LIBVA_DRIVER_NAME,nvidia
+	  env = __GLX_VENDOR_LIBRARY_NAME,nvidia
         '';
         ".config/hypr/hyprpaper.conf".text = ''
           preload = /home/nekonix/wallpapers/Kath.png
@@ -3471,7 +3478,7 @@
 	  };
 
 	  signing = {
-	  	key = "/home/nekonix/.ssh/id_ed25519_signing";
+	  	key = "/home/nekonix/.ssh/id_ed25519_sign";
 		signByDefault = true;
 	};
 

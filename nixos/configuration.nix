@@ -15,14 +15,14 @@
 		./networkAndHost.nix
 		./nvidia.nix
 		./inestables.nix
-    #./servicios.nix
+    		#./servicios.nix
 		<home-manager/nixos>
 		./cachix.nix
 		./homeManager.nix
     ];
 
 
-  boot.initrd.luks.devices."luks-7670fcc6-61f3-4fd3-b261-261e20728823".device = "/dev/disk/by-uuid/7670fcc6-61f3-4fd3-b261-261e20728823";
+  boot.initrd.luks.devices."luks-95281abb-ec5e-487f-b0a6-555535657144".device = "/dev/disk/by-uuid/95281abb-ec5e-487f-b0a6-555535657144";
 
 	nix.settings.experimental-features = [ "nix-command" "flakes" ];
 

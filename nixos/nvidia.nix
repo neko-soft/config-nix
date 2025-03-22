@@ -9,12 +9,12 @@
 
  # Enable OpenGL
 
-  environment.systemPackages = with pkgs; [
-    cudaPackages.cudatoolkit
-    cudaPackages.cudnn
-    cudaPackages.cuda_cccl
-    cudaPackages.cuda_nvcc
-  ];
+#  environment.systemPackages = with pkgs; [
+#    cudaPackages.cudatoolkit
+#    cudaPackages.cudnn
+#    cudaPackages.cuda_cccl
+#    cudaPackages.cuda_nvcc
+#  ];
 
 
   hardware.graphics.enable = true;
@@ -37,8 +37,8 @@
     powerManagement.finegrained = false;
     open = false;
     nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.production;
-
+    package = config.boot.kernelPackages.nvidiaPackages.latest;
+    nvidiaPersistenced = true;
 
   };
 
