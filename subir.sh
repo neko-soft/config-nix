@@ -5,11 +5,11 @@
 
 # Lista de carpetas y archivos a respaldar
 CONFIG_DIRS=(
-    "$HOME/.config/hypr"
-    "$HOME/.config/rofi"
-    "$HOME/.config/kitty"
-    "$HOME/.config/waybar"
-    "$HOME/.config/swaylock"
+    #"$HOME/.config/hypr"
+    #"$HOME/.config/rofi"
+    #"$HOME/.config/kitty"
+    #"$HOME/.config/waybar"
+    #"$HOME/.config/swaylock"
     "$HOME/wallpapers"
     "/etc/nixos"
 )
