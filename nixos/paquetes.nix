@@ -6,8 +6,6 @@
 
 { 
 
-
-
 	# List packages installed in system profile. To search, run:
 	# $ nix search wget
 	environment.systemPackages = with pkgs; [
@@ -81,25 +79,16 @@
 		};
 	};
 
-	# Polkit y authentication cosas
+	# Polkit y authentication
 	security.polkit.enable = true;
 
 	# RGB
 	services.hardware.openrgb.enable = false;
 	hardware.opentabletdriver.enable = true;
-	# Weás de GPU
-
-	#hardware.opengl = {
-	#enable = true;
-	#driSupport = true;
-	#driSupport32Bit = true;
-	#extraPackages = with pkgs; [
-	#	rocmPackages.clr.icd
-	#	];
-	#};
 
 
-	# Virtualización y cosas de KVM
+
+	# Virtualización y KVM
 	virtualisation = {
 		libvirtd = {
 			enable = true;

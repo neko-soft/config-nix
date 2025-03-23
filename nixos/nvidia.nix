@@ -1,4 +1,4 @@
-# Este módulo tiene weás relacionadas con NVIDIA y sus weás.
+# Este módulo tiene configuraciones relacionadas con NVIDIA
 
 
 { lib, config, pkgs, ... }:

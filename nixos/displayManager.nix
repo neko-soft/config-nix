@@ -22,19 +22,19 @@
 	# Tener en cuenta que hay que agregar varias cosas si usas NVIDIA
 	programs.hyprland.enable = true;
 	
-	# Weás de impresora
+	# Impresora
 	services.printing.enable = false;
 
 	qt = {
 		enable = true;
 	};
 
-	# Cosas raras
+	# XDG Portal
 	xdg.portal.enable = true;
 	xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
 
 
-	# Para tener audio
+	# Audio
 	hardware.pulseaudio.enable = false;
 	#sound.enable = true;
 	security.rtkit.enable = true;
