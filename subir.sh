@@ -18,8 +18,8 @@ CONFIG_FILES=(
     "$HOME/.bashrc"
 )
 
-# Carpeta destino (tu repo de dotfiles)
-DEST="$HOME/config-nix"
+
+DEST="$(dirname "$(realpath "$0")")"
 
 echo "📂 Copiando configuraciones a $DEST ..."
 
@@ -48,12 +48,16 @@ done
 
 echo "✅ Copia completada."
 
-# Subir cambios a GitHub
+
+
+echo "Mensaje del commit:"
+read MENSAJE
+
+
 cd "$DEST"
 git add .
-git commit -S -m "Copia automática de dotfiles"
+git commit -S -m "$MENSAJE"
 git push origin main
-
 
 
 
