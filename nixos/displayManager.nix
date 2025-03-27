@@ -15,8 +15,17 @@
 			xkb.variant = "";
 		};
 		displayManager = {
-			sddm.enable = false;
-			ly.enable = true;
+			sddm.enable = true;
+			ly = {
+				enable = false;
+				settings = {
+					animation = "matrix";
+					asterisk = "null";
+					numlock = true;
+					load = true;
+					save = true;
+				};
+			};
 		};
 		desktopManager.plasma6.enable = true;
 		};
