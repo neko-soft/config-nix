@@ -14,7 +14,10 @@
   			xkb.layout = "latam";
 			xkb.variant = "";
 		};
-		displayManager.sddm.enable = true;
+		displayManager = {
+			sddm.enable = false;
+			ly.enable = true;
+		};
 		desktopManager.plasma6.enable = true;
 		};
 
