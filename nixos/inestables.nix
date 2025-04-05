@@ -7,6 +7,6 @@ in
   environment.systemPackages = with unstable.pkgs; [
     qbittorrent
     krita
-    bottles
+    #bottles
   ];
 }

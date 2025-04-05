@@ -3478,7 +3478,7 @@
 	  };
 
 	  signing = {
-	  	key = "/home/nekonix/.ssh/id_ed25519_sign";
+	  	key = "/home/nekonix/.ssh/id_ed25519_signing";
 		signByDefault = true;
 	};
 

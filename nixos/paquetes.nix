@@ -50,7 +50,7 @@
 		# Extras		
 		#polkit polkit_gnome
 		kdePackages.kirigami gvfs unzip nerdfonts ntfs3g os-prober adwaita-icon-theme
-		git cachix
+		git cachix openvpn
 
  	 ];
 	#Home Manager
@@ -72,7 +72,7 @@
 			CPU_MIN_PERF_ON_AC = 0;
 			CPU_MAX_PERF_ON_AC = 100;
 			CPU_MIN_PERF_ON_BAT = 0;
-			CPU_MAX_PERF_ON_BAT = 40;
+			CPU_MAX_PERF_ON_BAT = 30;
 
 			START_CHARGE_THRESH_BAT0 = 40;
 			STOP_CHARGE_THRESH_BAT0 = 100;
