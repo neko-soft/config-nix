@@ -19,7 +19,7 @@
 		<home-manager/nixos>
 		./cachix.nix
 		./homeManager.nix
-		./nas.nix
+		#./nas.nix
     ];
 
 
