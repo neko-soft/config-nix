@@ -50,13 +50,13 @@ echo "✅ Copia completada."
 
 
 
-echo "Mensaje del commit:"
-read MENSAJE
+#echo "Mensaje del commit:"
+#read MENSAJE
 
 
 cd "$DEST"
 git add .
-git commit -S -m "$MENSAJE"
+git commit -S -m "Actualización de archivos $(date +"%Y-%m-%d %H:%M:%S")"
 git push origin main
 
 
