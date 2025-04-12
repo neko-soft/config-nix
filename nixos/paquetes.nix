@@ -50,7 +50,7 @@
 		# Extras		
 		#polkit polkit_gnome
 		kdePackages.kirigami gvfs unzip nerdfonts ntfs3g os-prober adwaita-icon-theme
-		git cachix openvpn
+		git cachix #openvpn
 
  	 ];
 	#Home Manager
