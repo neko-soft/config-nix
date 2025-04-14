@@ -51,6 +51,7 @@
 		#polkit polkit_gnome
 		kdePackages.kirigami gvfs unzip nerdfonts ntfs3g os-prober adwaita-icon-theme
 		git cachix #openvpn
+		#opentabletdriver
 
  	 ];
 	#Home Manager
@@ -84,8 +85,10 @@
 
 	# RGB
 	services.hardware.openrgb.enable = false;
-	hardware.opentabletdriver.enable = true;
-
+	hardware.opentabletdriver = {
+		enable = true;
+		daemon.enable = true;
+	};
 
 
 	# Virtualización y KVM
