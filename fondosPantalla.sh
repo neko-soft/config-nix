@@ -7,6 +7,7 @@
 WALLPAPER_DIR="$HOME/wallpapers"
 HOMEMANAGER_DIR="/etc/nixos/homeManager.nix"
 GRUB_DIR="/etc/nixos/bootLoader.nix"
+script_dir=$(dirname "$0")
 
 # Verificar si existe la carpeta de wallpapers o no.
 
@@ -53,7 +54,8 @@ echo ""
 sudo sed -i "s|preload = .*|preload = $SELECTED_PATH|" "$HOMEMANAGER_DIR"
 sudo sed -i "s|wallpaper = .*|wallpaper = ,$SELECTED_PATH|" "$HOMEMANAGER_DIR"
 
-
+wal -nqse -i $SELECTED_PATH
+bash "$script_dir/cambiarTema.sh"
 
 # Preguntar por el fondo de pantalla de GRUB
 echo "¿Desea cambiar el fondo de pantalla de GRUB con la misma imagen?"

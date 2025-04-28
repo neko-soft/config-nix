@@ -10,12 +10,12 @@ CONFIG_DIRS=(
     #"$HOME/.config/kitty"
     #"$HOME/.config/waybar"
     #"$HOME/.config/swaylock"
-    "$HOME/wallpapers"
+    "/home/nekonix/wallpapers"
     "/etc/nixos"
 )
 
 CONFIG_FILES=(
-    "$HOME/.bashrc"
+    "/home/nekonix/.bashrc"
 )
 
 

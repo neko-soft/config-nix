@@ -9,6 +9,7 @@ while true; do
     if pgrep -xaf "sudo nixos-rebuild switch" > /dev/null; then
         echo "Detectado sudo nixos-rebuild switch, esperando a que termine..."
         
+
         # Esperar a que termine
         while pgrep -xaf "sudo nixos-rebuild switch" > /dev/null; do
             sleep 5
@@ -34,6 +35,13 @@ while true; do
             sleep 0.5
         done
         waybar &
+
+        # Para matar dunst
+        pkill dunst
+        while pgrep -x dunst >/dev/null; do
+            sleep 0.5
+        done
+        dunst &
 
         echo "Comandos post-switch ejecutados."
     fi

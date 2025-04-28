@@ -13,13 +13,14 @@
 
 		# Aplicaciones básicas
 		firefox	spotify	thunderbird obsidian kitty vscode xfce.thunar neovim
-		
+		discord
+
 		# Programas Creativos		
 		#reaper davinci-resolve krita
 
 		# Terminal y Kitty
 		fastfetch asciiquarium cmatrix lf neo-cowsay fortune-kind pipes
-		nsnake cava sl cbonsai
+		nsnake cava sl cbonsai playerctl pywal
 		
 		# Hyprland y Desktop Environment
 		waybar rofi-wayland hyprpaper dunst libnotify
@@ -58,11 +59,12 @@
 	#programs.home-manager.enable = true;
 
 	# Power managment
+	
 	services.power-profiles-daemon.enable = false;
-	services.thermald.enable = false;
-	powerManagement.enable = false;
+	services.thermald.enable = true;	
+	powerManagement.enable = true;
 	services.tlp = {
-		enable = true;
+		enable = false;
 		settings = {
 			CPU_SCALING_GOVERNOR_ON_AC = "performance";
 			CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
@@ -70,13 +72,13 @@
 			CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
 			CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
 
-			CPU_MIN_PERF_ON_AC = 0;
+			CPU_MIN_PERF_ON_AC = 60;
 			CPU_MAX_PERF_ON_AC = 100;
 			CPU_MIN_PERF_ON_BAT = 0;
 			CPU_MAX_PERF_ON_BAT = 30;
 
-			START_CHARGE_THRESH_BAT0 = 1;
-			STOP_CHARGE_THRESH_BAT0 = 100;
+			START_CHARGE_THRESH_BAT0 = 40;
+			STOP_CHARGE_THRESH_BAT0 = 80;
 		};
 	};
 
