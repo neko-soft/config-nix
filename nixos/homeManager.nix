@@ -1,9 +1,6 @@
 { config, pkgs, lib, ... }:
 
-
-
 {
-
   #programs.home-manager.enable = true;
 
   users.users.nekonix = {
@@ -20,23 +17,6 @@
     users.nekonix = { pkgs, ... }: {
       home.stateVersion = "24.11"; # Ajusta según la versión de NixOS
       home.file = {
-        # Config dunst
-        ".config/dunst/dunstrc".text = ''
-          [global]
-            origin = top-right
-            offset = 2x2
-	    width = (0,500)
-	    height = (0,300)
-            font = Monospace 12
-            min_icon_size = 50
-            max_icon_size = 100
-            corner_radius = 10
-            frame_color = "#ace6f3cc"
-            separator_color = "frame"
-            background = "#050512cc"
-            foreground = "#ace6f3"
-        '';
-
         # Configs de Hyprland
         ".config/hypr/hyprland.conf".text = ''
           # /home/nekoArch/.config/hypr/hyprland.conf
@@ -56,8 +36,8 @@
           # See https://wiki.hyprland.org/Configuring/Monitors/
           monitor=eDP-1,1920x1080@144, 0x0, 1
           #monitor=,preferred,auto,1, mirror, eDP-1
-          monitor= HDMI-A-1, 1920x1080@144, -1920x0, 1
-          #monitor = , preferred, left, 1
+          #monitor= HDMI-A-1, 1920x1080@144, up, 1
+          monitor = , preferred, 0x-1080, 1
           env = WLR_NO_HARDWARE_CURSORS,1
 
           # Dispatchers
@@ -69,7 +49,7 @@
           exec-once = waybar & firefox & hyprpaper & dunst
           #exec-once = /nix/store/$(ls -la /nix/store | grep polkit-kde-agent | grep '^d' | awk '{print $9}' | head -n 1)/libexec/polkit-kde-authentication-agent-1
           exec-once = systemctl --user enable opentabletdriver.service --now
-          exec-once = /home/nekonix/proyectos/config-nix/refresco.sh
+          exec-once = /home/nekonix/config-nix/refresco.sh
           exec-once = systemctl --user start hyprpolkitagent
 
           # Source a file (multi-file configs)
@@ -253,20 +233,13 @@
 
           # Volume and Media
 
-	# Subir, bajar y mutear volumen
-          binde= , XF86audioraisevolume, exec, pactl set-sink-volume @DEFAULT_SINK@ +1% && dunstify -r 91190 -u low "Volumen +" "$(pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}')"
-          binde= , XF86audiolowervolume, exec, pactl set-sink-volume @DEFAULT_SINK@ -1% && dunstify -r 91190 -u low "Volumen -" "$(pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}')"
-          binde= , XF86AudioMute, exec, pactl set-sink-mute @DEFAULT_SINK@ toggle       && dunstify -r 91190 -u low "Silenciado" "$(pactl get-sink-mute @DEFAULT_SINK@ | awk '{print $2}')"
-	# Controles de media
-	  bind = , XF86AudioPlay, exec, playerctl play-pause
-	  bind = , XF86AudioNext, exec, playerctl next
-	  bind = , XF86AudioPrev, exec, playerctl previous
-	  bind = , XF86AudioStop, exec, playerctl stop
-        # Controles de brillo  
-	  binde= , XF86MonBrightnessUp, exec, brightnessctl set 5%+
+
+          binde= , XF86audioraisevolume, exec, pactl set-sink-volume @DEFAULT_SINK@ +5%
+          binde= , XF86audiolowervolume, exec, pactl set-sink-volume @DEFAULT_SINK@ -5%
+          binde= , XF86AudioMute, exec, pactl set-sink-mute @DEFAULT_SINK@ toggle 
+          binde= , XF86MonBrightnessUp, exec, brightnessctl set 5%+
           binde= , XF86MonBrightnessDown, exec, brightnessctl set 5%-
-        # Pantallazo   
-	  bind =, Print, exec, grim -g "$(slurp -d)"
+          bind =, Print, exec, grim -g "$(slurp -d)"
 
           debug {
               suppress_errors = true 
@@ -433,7 +406,7 @@
           #pulseaudio,
           #network {
             padding: 4px 8px;
-            background-color: rgba(0,0,0,0.8);
+            background-color: rgba(0,0,0,0.5);
             /*background-color: #303643;*/
             border-radius: 30px;
             margin: 6px 4px;
