@@ -8,26 +8,26 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "usb_storage" "sd_mod" ];
+  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "usbhid" "usb_storage" "sd_mod" "sdhci_pci" ];
   boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-intel" ];
+  boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/79140d11-9fb9-4835-bd40-8def6c7cb02f";
+    { device = "/dev/disk/by-uuid/800037ba-7e3c-45c6-866c-7c923234ed15";
       fsType = "ext4";
     };
 
-  boot.initrd.luks.devices."luks-93a4799d-0514-4217-a454-ac07be7dd46a".device = "/dev/disk/by-uuid/93a4799d-0514-4217-a454-ac07be7dd46a";
+  boot.initrd.luks.devices."luks-4bbcf021-8703-42aa-bd5a-9e99b6b17fdf".device = "/dev/disk/by-uuid/4bbcf021-8703-42aa-bd5a-9e99b6b17fdf";
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/2C57-6BBA";
+    { device = "/dev/disk/by-uuid/16D1-A160";
       fsType = "vfat";
-      options = [ "fmask=0022" "dmask=0022" ];
+      options = [ "fmask=0077" "dmask=0077" ];
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/eaf7f69a-5d4c-4cc3-aff6-737934bdfd74"; }
+    [ { device = "/dev/disk/by-uuid/a20b1e74-a350-4dc6-874a-917c7a45126a"; }
     ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
@@ -35,8 +35,9 @@
   # still possible to use this option, but it's recommended to use it in conjunction
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
+  # networking.interfaces.eno1.useDHCP = lib.mkDefault true;
   # networking.interfaces.wlo1.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }

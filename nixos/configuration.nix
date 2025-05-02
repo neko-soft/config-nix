@@ -15,7 +15,7 @@
 		./networkAndHost.nix
 		#./nvidia.nix
 		./inestables.nix
-    		#./servicios.nix
+    	#./servicios.nix
 		<home-manager/nixos>
 		./cachix.nix
 		./homeManager.nix
@@ -23,7 +23,7 @@
     ];
 
 
-  boot.initrd.luks.devices."luks-a1ebf852-7aee-47ef-b5c7-54392bb7485b".device = "/dev/disk/by-uuid/a1ebf852-7aee-47ef-b5c7-54392bb7485b";
+  boot.initrd.luks.devices."luks-1267b475-d405-45e1-8362-2b1edb7d04e7".device = "/dev/disk/by-uuid/1267b475-d405-45e1-8362-2b1edb7d04e7";
 
 	nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -34,7 +34,7 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system = {
-  	stateVersion = "24.05";
+  	stateVersion = "24.11";
 	autoUpgrade = {
 		enable = false;
 		allowReboot = false;

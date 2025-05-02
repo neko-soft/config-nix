@@ -17,6 +17,25 @@
     users.nekonix = { pkgs, ... }: {
       home.stateVersion = "24.11"; # Ajusta según la versión de NixOS
       home.file = {
+	# Config Dunst
+
+        ".config/dunst/dunstrc".text = ''
+ 	[global]
+        	origin = top-right
+            	offset = 2x2
+	    	width = (0,500)
+	    	height = (0,300)
+            	font = Monospace 12
+            	min_icon_size = 50
+            	max_icon_size = 100
+            	corner_radius = 10
+            	frame_color = "#ace6f3cc"
+            	separator_color = "frame"
+            	background = "#050512cc"
+            	foreground = "#ace6f3"
+       '';
+
+
         # Configs de Hyprland
         ".config/hypr/hyprland.conf".text = ''
           # /home/nekoArch/.config/hypr/hyprland.conf
@@ -36,8 +55,8 @@
           # See https://wiki.hyprland.org/Configuring/Monitors/
           monitor=eDP-1,1920x1080@144, 0x0, 1
           #monitor=,preferred,auto,1, mirror, eDP-1
-          #monitor= HDMI-A-1, 1920x1080@144, up, 1
-          monitor = , preferred, 0x-1080, 1
+          monitor= HDMI-A-1, 1920x1080@144, -1920x0, 1
+          #monitor = , preferred, 0x-1080, 1
           env = WLR_NO_HARDWARE_CURSORS,1
 
           # Dispatchers
@@ -46,13 +65,40 @@
           # See https://wiki.hyprland.org/Configuring/Keywords/ for more
 
           # Execute your favorite apps at launch
-          exec-once = waybar & firefox & hyprpaper & dunst
+          exec-once = waybar & hyprpaper & dunst
           #exec-once = /nix/store/$(ls -la /nix/store | grep polkit-kde-agent | grep '^d' | awk '{print $9}' | head -n 1)/libexec/polkit-kde-authentication-agent-1
           exec-once = systemctl --user enable opentabletdriver.service --now
           exec-once = /home/nekonix/config-nix/refresco.sh
           exec-once = systemctl --user start hyprpolkitagent
 
-          # Source a file (multi-file configs)
+          exec-once = kitty --class CMatrix --workspace 10 -e cmatrix
+          exec-once = kitty --class Asciiquarium --workspace 10 -e asciiquarium
+          exec-once = kitty --class CBonsai --workspace 10 -e cbonsai -S
+          exec-once = kitty --class Cava --workspace 10 -e cava
+          exec-once = kitty --class Pipes --workspace 10 -e pipes.sh
+
+
+	  windowrule = size 50% 100%, class:CMatrix
+	  windowrule = position 0 0, class:CMatrix
+	  
+	  windowrule = size 50% 50%, class:Asciiquarium
+	  windowrule = position 50% 0, class:Asciiquarium
+
+	  windowrule = position 25% 50%, class:CBonsai
+	  windowrule = size 75% 50%, class:CBonsai
+
+	  windowrule = size 25% 50%, class:Cava
+	  windowrule = position 75% 50%, class:Cava
+
+	  windowrule = size 25% 50%, class:Pipes
+	  windowrule = position 75% 50%, class:Pipes
+
+          workspace = special:spotify, on-created-empty: spotify
+	  workspace = 1, monitor:HDMI-A-1, default:true, on-created-empty:[] firefox
+	  workspace = 10, monitor:eDP-1, default:true
+
+
+	  # Source a file (multi-file configs)
           # source = ~/.config/hypr/myColors.conf
 
           # Set programs that you use
@@ -178,7 +224,7 @@
           bind = $mainMod, W, killactive, 
           bind = $mainMod, M, exit, 
           bind = $mainMod, E, exec, $fileManager
-          bind = $mainMod, V, togglefloating, 
+          #bind = $mainMod, V, togglefloating, 
           bind = $mainMod, R, exec, $menu
           bind = $mainMod, P, pseudo, # dwindle
           bind = $mainMod, S, togglesplit, # dwindle
@@ -215,8 +261,17 @@
           bind = $mainMod SHIFT, 0, movetoworkspace, 10
 
           # Example special workspace (scratchpad)
-          #bind = $mainMod, S, togglespecialworkspace, magic
-          #bind = $mainMod SHIFT, S, movetoworkspace, special:magic
+          bind = $mainMod, Z, togglespecialworkspace, spotify
+          bind = $mainMod SHIFT, Z, movetoworkspace, special:spotify
+	  
+	  bind = $mainMod, X, togglespecialworkspace, obsidian
+	  bind = $mainMod SHIFT, X, movetoworkspace, special:obsidian
+
+	  bind = $mainMod, C, togglespecialworkspace, mail
+	  bind = $mainMod SHIFT, C, movetoworkspace, special:mail
+
+ 	  bind = $mainMod, V, togglespecialworkspace, discord
+	  bind = $mainMod SHIFT, V, movetoworkspace, special:discord
 
           # Scroll through existing workspaces with mainMod + scroll
           bind = $mainMod, mouse_down, workspace, e-1
@@ -233,12 +288,23 @@
 
           # Volume and Media
 
+	# Subir, bajar y mutear volumen
+           binde= , XF86audioraisevolume, exec, pactl set-sink-volume @DEFAULT_SINK@ +1% && dunstify -r 91190 -u low "Volumen +" "$(pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}')"
+           binde= , XF86audiolowervolume, exec, pactl set-sink-volume @DEFAULT_SINK@ -1% && dunstify -r 91190 -u low "Volumen -" "$(pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}')"
+           binde= , XF86AudioMute, exec, pactl set-sink-mute @DEFAULT_SINK@ toggle       && dunstify -r 91190 -u low "Silenciado" "$(pactl get-sink-mute @DEFAULT_SINK@ | awk '{print $2}')"
+ 
 
-          binde= , XF86audioraisevolume, exec, pactl set-sink-volume @DEFAULT_SINK@ +5%
-          binde= , XF86audiolowervolume, exec, pactl set-sink-volume @DEFAULT_SINK@ -5%
-          binde= , XF86AudioMute, exec, pactl set-sink-mute @DEFAULT_SINK@ toggle 
+	# Controles de media
+ 	  bind = , XF86AudioPlay, exec, playerctl play-pause
+ 	  bind = , XF86AudioNext, exec, playerctl next
+ 	  bind = , XF86AudioPrev, exec, playerctl previous
+ 	  bind = , XF86AudioStop, exec, playerctl stop
+
+	  # Controles de brillo
           binde= , XF86MonBrightnessUp, exec, brightnessctl set 5%+
           binde= , XF86MonBrightnessDown, exec, brightnessctl set 5%-
+
+	  # Pantallazos
           bind =, Print, exec, grim -g "$(slurp -d)"
 
           debug {
@@ -249,8 +315,8 @@
 	  env = GTK_THEME,Adwaita:dark
 	  env = QT_STYLE_OVERRIDE,kvantum
 	  env = QT_QPA_PLATFORMTHEME,qt5ct
-	  env = LIBVA_DRIVER_NAME,nvidia
-	  env = __GLX_VENDOR_LIBRARY_NAME,nvidia
+	  #env = LIBVA_DRIVER_NAME,nvidia
+	  #env = __GLX_VENDOR_LIBRARY_NAME,nvidia
         '';
         ".config/hypr/hyprpaper.conf".text = ''
           preload = /home/nekonix/wallpapers/Kath.png

@@ -6,7 +6,7 @@ in
 {
   environment.systemPackages = with unstable.pkgs; [
     qbittorrent
-    wineWowPackages.waylandFull
+    #wineWowPackages.waylandFull
     #winetricks
     krita
     #opentabletdriver

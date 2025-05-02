@@ -13,7 +13,7 @@
 
 		# Aplicaciones básicas
 		firefox	spotify	thunderbird obsidian kitty vscode xfce.thunar neovim
-		p7zip
+		p7zip discord playerctl pywal
 
 		# Programas Creativos		
 		#reaper davinci-resolve krita
@@ -72,13 +72,13 @@
 			CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
 			CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
 
-			CPU_MIN_PERF_ON_AC = 0;
+			CPU_MIN_PERF_ON_AC = 60;
 			CPU_MAX_PERF_ON_AC = 100;
 			CPU_MIN_PERF_ON_BAT = 0;
 			CPU_MAX_PERF_ON_BAT = 30;
 
-			START_CHARGE_THRESH_BAT0 = 1;
-			STOP_CHARGE_THRESH_BAT0 = 100;
+			START_CHARGE_THRESH_BAT0 = 40;
+			STOP_CHARGE_THRESH_BAT0 = 80;
 		};
 	};
 
