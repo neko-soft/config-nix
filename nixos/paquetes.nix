@@ -15,12 +15,15 @@
 		firefox	spotify	thunderbird obsidian kitty vscode xfce.thunar neovim
 		p7zip discord playerctl pywal
 
+		# Análisis
+		htop killall vnstat iftop
+
 		# Programas Creativos		
 		#reaper davinci-resolve krita
 
 		# Terminal y Kitty
 		fastfetch asciiquarium cmatrix lf neo-cowsay fortune-kind pipes
-		nsnake cava sl cbonsai
+		nsnake cava sl cbonsai tty-clock glava cool-retro-term
 		
 		# Hyprland y Desktop Environment
 		waybar rofi-wayland hyprpaper dunst libnotify
