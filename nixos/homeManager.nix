@@ -71,32 +71,15 @@
           exec-once = /home/nekonix/config-nix/refresco.sh
           exec-once = systemctl --user start hyprpolkitagent
 
-          exec-once = kitty --class CMatrix --workspace 10 -e cmatrix
-          exec-once = kitty --class Asciiquarium --workspace 10 -e asciiquarium
-          exec-once = kitty --class CBonsai --workspace 10 -e cbonsai -S
-          exec-once = kitty --class Cava --workspace 10 -e cava
-          exec-once = kitty --class Pipes --workspace 10 -e pipes.sh
-
-
-	  windowrule = size 50% 100%, class:CMatrix
-	  windowrule = position 0 0, class:CMatrix
-	  
-	  windowrule = size 50% 50%, class:Asciiquarium
-	  windowrule = position 50% 0, class:Asciiquarium
-
-	  windowrule = position 25% 50%, class:CBonsai
-	  windowrule = size 75% 50%, class:CBonsai
-
-	  windowrule = size 25% 50%, class:Cava
-	  windowrule = position 75% 50%, class:Cava
-
-	  windowrule = size 25% 50%, class:Pipes
-	  windowrule = position 75% 50%, class:Pipes
 
           workspace = special:spotify, on-created-empty: spotify
-	  workspace = 1, monitor:HDMI-A-1, default:true, on-created-empty:[] firefox
-	  workspace = 10, monitor:eDP-1, default:true
+	  workspace = special:obsidian, on-created-empty: obsidian
+	  workspace = special:mail, on-created-empty: thunderbird
+	  workspace = special:discord, on-created-empty: discord
+	  workspace = 1, monitor:HDMI-A-1, default:true, on-created-empty: firefox
+	  workspace = 10, monitor:eDP-1, default:true, on-created-empty:[] kitty -e cmatrix & kitty -e asciiquarium & kitty -e cava & kitty -e pipes.sh & kitty cbonsai -S
 
+	#windowrulev2 = workspace 10, class:^(kitty)$ 
 
 	  # Source a file (multi-file configs)
           # source = ~/.config/hypr/myColors.conf
