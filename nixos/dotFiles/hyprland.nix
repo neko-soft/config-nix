@@ -2,6 +2,15 @@
 
 {
 
+services.hyprpaper = {
+	enable = true;
+	settings = {
+		preload = ["/home/nekonix/wallpapers/Kath.png"];
+		wallpaper = [",/home/nekonix/wallpapers/Kath.png"];
+	};
+};
+
+#services.hyprpolkitagent.enable = true;
 home.file = {
 
 # Configs de Hyprland
@@ -269,10 +278,10 @@ home.file = {
         '';
 
 	# Config hyprpaper
-        ".config/hypr/hyprpaper.conf".text = ''
-          preload = /home/nekonix/wallpapers/Kath.png
-          wallpaper = ,/home/nekonix/wallpapers/Kath.png
-        '';
+        #".config/hypr/hyprpaper.conf".text = ''
+        #  preload = /home/nekonix/wallpapers/Kath.png
+        #  wallpaper = ,/home/nekonix/wallpapers/Kath.png
+        #'';
 
 
 };

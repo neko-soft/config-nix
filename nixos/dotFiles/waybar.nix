@@ -45,8 +45,8 @@ programs.waybar = {
 
       };
       network = {
-          interface = "enp9s0f4u2";
-          tooltip-format-ethernet = "{ifname} ";
+          #interface = "enp9s0f4u2";
+          #tooltip-format-ethernet = "{ifname} ";
           interval = 1;
           format = "{bandwidthDownBytes}  {bandwidthUpBytes}  ";
       };

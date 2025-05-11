@@ -21,12 +21,13 @@ while true; do
         hyprctl reload
 
         # Esto es para matar el proceso de hyprpaper, esperar que realmente esté muerto, y después reiniciarlo.
-        pkill hyprpaper
-        while pgrep -x "hyprpaper" > /dev/null; do
-            sleep 0.5
-            echo "Esperando que muera hyprpaper"
-        done
-        hyprpaper &
+	# Si se usa homeManager no es necesario tener esto activado
+        #pkill hyprpaper
+        #while pgrep -x "hyprpaper" > /dev/null; do
+        #    sleep 0.5
+        #    echo "Esperando que muera hyprpaper"
+        #done
+        #hyprpaper &
 
 
         # Esto es para matar el proceso de waybar, esperar que realmente esté muerto, y después reiniciarlo.
