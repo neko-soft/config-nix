@@ -277,11 +277,6 @@ home.file = {
 	  #env = __GLX_VENDOR_LIBRARY_NAME,nvidia
         '';
 
-	# Config hyprpaper
-        #".config/hypr/hyprpaper.conf".text = ''
-        #  preload = /home/nekonix/wallpapers/Kath.png
-        #  wallpaper = ,/home/nekonix/wallpapers/Kath.png
-        #'';
 
 
 };

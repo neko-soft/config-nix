@@ -60,6 +60,7 @@ programs.waybar = {
         };
         format = "{capacity}% {icon}";
         format-charging = "{capacity}% {icon}󱐋";
+        format-full = "{capacity}% {icon}󱐋";
         format-icons = [ "󱃍" "󰁻" "󰁾" "󰂀" "󰁹"];
         max-length = 25;
       };
