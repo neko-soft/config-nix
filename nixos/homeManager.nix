@@ -293,7 +293,7 @@
           monitor=eDP-1,1920x1080@144, 0x0, 1
           #monitor=,preferred,auto,1, mirror, eDP-1
           monitor= HDMI-A-1, 1920x1080@144, -1920x0, 1
-          #monitor = , preferred, 0x-1080, 1
+          #monitor = , preferred, -1920x0, 1
           env = WLR_NO_HARDWARE_CURSORS,1
 
           # Dispatchers

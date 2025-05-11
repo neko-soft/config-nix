@@ -12,7 +12,7 @@
 		enable = true;
 		devices = [ "nodev" ];
 		efiSupport = true;
-		useOSProber = false;
+		useOSProber = true;
 		default = 0;
 		splashImage = /home/nekonix/wallpapers/Kath.png;
 		};
