@@ -30,11 +30,12 @@ while true; do
 
 
         # Esto es para matar el proceso de waybar, esperar que realmente esté muerto, y después reiniciarlo.
-        pkill waybar
-        while pgrep -x waybar >/dev/null; do
-            sleep 0.5
-        done
-        waybar &
+	# Si se usa homeManager, no es necesario tener esto activado
+        #pkill waybar
+        #while pgrep -x waybar >/dev/null; do
+        #    sleep 0.5
+        #done
+        #waybar &
 
         # Para matar dunst
         pkill dunst
