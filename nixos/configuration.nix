@@ -23,7 +23,7 @@
     ];
 
 
-  boot.initrd.luks.devices."luks-1267b475-d405-45e1-8362-2b1edb7d04e7".device = "/dev/disk/by-uuid/1267b475-d405-45e1-8362-2b1edb7d04e7";
+  boot.initrd.luks.devices."luks-15d266fa-52e9-438f-83ce-68faafb260d5".device = "/dev/disk/by-uuid/15d266fa-52e9-438f-83ce-68faafb260d5";
 
 	nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -36,7 +36,7 @@
   system = {
   	stateVersion = "24.11";
 	autoUpgrade = {
-		enable = false;
+		enable = true;
 		allowReboot = false;
 	};
   };

@@ -8,23 +8,25 @@
     home = "/home/nekonix";
   };
 
-
+  #imports = [
+  #  ./dotFiles/swaylock.nix
+  #];
 
   home-manager = {
     backupFileExtension = "backup";
     useGlobalPkgs = true;
     useUserPackages = true;
     users.nekonix = { pkgs, ... }: {
+      imports = [
+        ./dotFiles/swaylock.nix
+        ./dotFiles/cava.nix
+	./dotFiles/dunst.nix
+      ];
       home.stateVersion = "24.11"; # Ajusta según la versión de NixOS
       home.file = {
 
-      	# Config Cava y GLaVa
+      	# Config GLaVa
 
-	".config/cava/config".text = ''
-	[general]
-		bars = 0
-		bar_width = 1
-	'';
 
 	".config/glava/rc.glsl".text = ''
 	/* The module to use. A module is a set of shaders used to produce
@@ -254,23 +256,6 @@
    `setsamplesize` to improve performance or accuracy instead. */
 #request setbufscale 1
 	'';
-	# Config Dunst
-
-        ".config/dunst/dunstrc".text = ''
- 	[global]
-        	origin = top-right
-            	offset = 2x2
-	    	width = (0,500)
-	    	height = (0,300)
-            	font = Monospace 12
-            	min_icon_size = 50
-            	max_icon_size = 100
-            	corner_radius = 10
-            	frame_color = "#ace6f3cc"
-            	separator_color = "frame"
-            	background = "#050512cc"
-            	foreground = "#ace6f3"
-       '';
 
 
         # Configs de Hyprland
@@ -354,7 +339,7 @@
               gaps_in = 2
               gaps_out = 2
               border_size = 1
-              col.active_border = rgba(33ccffee) rgba(00ff99ee) 45deg
+              col.active_border = rgba(8b9efdee) rgba(5cbcd6ee) 45deg
               col.inactive_border = rgba(595959aa)
 
               layout = dwindle
@@ -3698,48 +3683,7 @@
           color15 #e1e6ff
 
         '';
-        # Config SwayLock
-        ".config/swaylock/config".text = ''
-          daemonize
-          show-failed-attempts
-          clock
-          screenshot
-          effect-blur=9x9
-          effect-vignette=0.5:0.5
-          color=1f1d2e80
-          font="Lucida Grande"
-          indicator
-          indicator-radius=200
-          indicator-thickness=20
-          line-color=1f1d2e
-          ring-color=33CCFE
-          inside-color=1f1d2e
-          key-hl-color=EC4899
-          separator-color=00000000
-          text-color=e0def4
-          text-caps-lock-color=""
-          line-ver-color=eb6f92
-          ring-ver-color=eb6f92
-          inside-ver-color=1f1d2e
-          text-ver-color=e0def4
-          ring-wrong-color=31748f
-          text-wrong-color=31748f
-          inside-wrong-color=1f1d2e
-          inside-clear-color=1f1d2e
-          text-clear-color=e0def4
-          ring-clear-color=9ccfd8
-          line-clear-color=1f1d2e
-          line-wrong-color=1f1d2e
-          bs-hl-color=31748f
-          grace=2
-          grace-no-mouse
-          grace-no-touch
-          datestr=%Y-%m-%d
-          timestr=%H:%M:%S
-          fade-in=0.1
-          ignore-empty-password
 
-        '';
 
       }; # Fin home.file
 
