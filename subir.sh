@@ -34,7 +34,7 @@ for DIR in "${CONFIG_DIRS[@]}"; do
 done
 
 #rm -rf $DEST/kitty/kitty-themes
-rm $DEST/nixos/hardware-configuration.nix -y
+rm $DEST/nixos/hardware-configuration.nix
 
 # Copiar archivos individuales
 for FILE in "${CONFIG_FILES[@]}"; do
