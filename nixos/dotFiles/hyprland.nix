@@ -69,7 +69,7 @@ wayland.windowManager.hyprland = {
         "special:mail, on-created-empty: thunderbird"
         "special:discord, on-created-empty: discord"
         "1, monitor:HDMI-A-1, default:true, on-created-empty: firefox"
-        "10, monitor:eDP-1, default:true, on-created-empty: kitty -e cmatrix & sleep 0.5; kitty -e asciiquarium & sleep 0.5 ; kitty -e cbonsai -li & sleep 0.5; kitty -e pipes.sh & sleep 0.5; kitty -e nohup glava"
+        "10, monitor:eDP-1, default:true, on-created-empty: kitty -e cmatrix & sleep 0.05; kitty -e asciiquarium & sleep 0.05 ; kitty -e cbonsai -li & sleep 0.05; kitty -e pipes.sh & sleep 0.05; kitty -e nohup glava"
       ];
 
       "$terminal" = "kitty";
