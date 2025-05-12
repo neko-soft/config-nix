@@ -54,10 +54,12 @@ wayland.windowManager.hyprland = {
 
     # Execute your favorite apps at launch
     exec-once = [
-        "waybar & hyprpaper & dunst"
+        "waybar & dunst"
         "systemctl --user enable opentabletdriver.service --now"
         "/home/nekonix/config-nix/refresco.sh"
         "systemctl --user start hyprpolkitagent"
+	#"mpvpaper -vs -o 'no-audio loop' eDP-1 Downloads/zoneZero.mp4" 
+	#"mpvpaper -vs -o 'no-audio loop' HDMI-A-1 Downloads/zoneZero.mp4"
         #"/nix/store/$(ls -la /nix/store | grep polkit-kde-agent | grep '^d' | awk '{print $9}' | head -n 1)/libexec/polkit-kde-authentication-agent-1"
       ];
 
@@ -67,7 +69,7 @@ wayland.windowManager.hyprland = {
         "special:mail, on-created-empty: thunderbird"
         "special:discord, on-created-empty: discord"
         "1, monitor:HDMI-A-1, default:true, on-created-empty: firefox"
-        "10, monitor:eDP-1, default:true, on-created-empty: kitty -e cmatrix & sleep 0.05; kitty -e asciiquarium & sleep 0.05 ; kitty -e cbonsai -li & sleep 0.05; kitty -e pipes.sh & sleep 0.05; kitty -e nohup glava"
+        "10, monitor:eDP-1, default:true, on-created-empty: kitty -e cmatrix & sleep 0.5; kitty -e asciiquarium & sleep 0.5 ; kitty -e cbonsai -li & sleep 0.5; kitty -e pipes.sh & sleep 0.5; kitty -e nohup glava"
       ];
 
       "$terminal" = "kitty";
@@ -253,10 +255,20 @@ wayland.windowManager.hyprland = {
       # y seguirá ejecutando el comando
       binde = [
         # Controles de volumen
-        ", XF86audioraisevolume, exec, pactl set-sink-volume @DEFAULT_SINK@ +1% && dunstify -r 91190 -u low \"Volumen +\" \"$(pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}')\""
-        ", XF86audiolowervolume, exec, pactl set-sink-volume @DEFAULT_SINK@ -1% && dunstify -r 91190 -u low \"Volumen -\" \"$(pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}')\""
-        ", XF86AudioMute, exec, pactl set-sink-mute @DEFAULT_SINK@ toggle && dunstify -r 91190 -u low \"Silenciado\" \"$(pactl get-sink-mute @DEFAULT_SINK@ | awk '{print $2}')\""
+        #", XF86audioraisevolume, exec, pactl set-sink-volume @DEFAULT_SINK@ +1% && dunstify -r 91190 -u low \"Volumen +\" \"$(pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}')\""
+        #", XF86audiolowervolume, exec, pactl set-sink-volume @DEFAULT_SINK@ -1% && dunstify -r 91190 -u low \"Volumen -\" \"$(pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}')\""
+        #", XF86AudioMute, exec, pactl set-sink-mute @DEFAULT_SINK@ toggle && dunstify -r 91190 -u low \"Silenciado\" \"$(pactl get-sink-mute @DEFAULT_SINK@ | awk '{print $2}')\""
         
+
+        ", XF86AudioRaiseVolume, exec, ~/config-nix/scripts/hyprland/volumen.sh up"
+        ", XF86AudioLowerVolume, exec, ~/config-nix/scripts/hyprland/volumen.sh down"
+        ", XF86AudioMute, exec, ~/config-nix/scripts/hyprland/volumen.sh mute"
+
+        # MUTE
+        #", XF86AudioMute, exec, pactl set-sink-mute @DEFAULT_SINK@ toggle && MUTE=\$(pactl get-sink-mute @DEFAULT_SINK@ | awk '{print \$2}') && MSG=\$( [ \"\$MUTE\" = \"yes\" ] && echo \"🔇 Silenciado\" || echo \"🔊 Activado\") && dunstify -r 91190 -u low \"Mute\" \"\$MSG\""
+
+
+
         # Controles de brillo
         ", XF86MonBrightnessUp, exec, brightnessctl set 5%+"
         ", XF86MonBrightnessDown, exec, brightnessctl set 5%-"

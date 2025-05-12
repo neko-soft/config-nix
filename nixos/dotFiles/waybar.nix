@@ -11,9 +11,9 @@ programs.waybar = {
       position = "top";
       margin-bottom = 0;
       modules-left = [ "clock" "hyprland/workspaces"];
-      modules-center = [ "hyprland/window" ];
+      modules-center = [ "hyprland/window"];
       modules-right = [ "network" "temperature" "memory" "cpu"
-                      "pulseaudio" "battery"];
+                      "pulseaudio" "cava" "battery"];
 
       "hyprland/window" = {
         format = "{}";
@@ -48,7 +48,7 @@ programs.waybar = {
           #interface = "enp9s0f4u2";
           #tooltip-format-ethernet = "{ifname} ";
           interval = 1;
-          format = "{bandwidthDownBytes}  {bandwidthUpBytes}  ";
+          format = "{bandwidthDownBytes}   {bandwidthUpBytes} ";
       };
 
       battery = {
@@ -75,9 +75,11 @@ programs.waybar = {
           "/sys/class/thermal/thermal_zone0/temp"
         ];
         critical-threshold = 80;
-        format-critical = "{temperatureC}°C ";
-        format = "{temperatureC}°C ";
+        format-critical = "{temperatureC}°C  ";
+        format = "{temperatureC}°C {icon}";
+        format-icons = ["" "" "" ""];
       };
+
 
       memory = {
         format = "{used:0.1f}G/{total:0.1f}G  ";
@@ -99,9 +101,10 @@ programs.waybar = {
       pulseaudio = {
         format = "{volume}% {icon}";
         format-bluetooth = "{volume}% {icon}";
-        format-muted = "";
+        format-muted = "󰖁";
         format-icons = {
-          headphone = "";
+          headphone = " ";
+          speaker = "󰓃";
           "hands-free" = "";
           headset = "";
           phone = "";
@@ -111,10 +114,41 @@ programs.waybar = {
         };
         scroll-step = 1;
         on-click = "pavucontrol";
+        max-volume = 100;
       };
 
+      cava = {
+        framerate = 144;
+        autosens = 1;
+        #sensitivity = 100;
+        bars = 14;
+        lower_cutoff_freq = 50;
+        higher_cutoff_freq = 10000;
+        sample_rate = 44100;
+        sample_bits = 8;
+        method = "pulse";
+        source = "auto";
+        sleep_timer = 1;
+        hide_on_silence = true;
+        stereo = true;
+        reverse = false;
+        bar_delimiter = 0;
+        monstercat = false;
+        waves = false;
+        noise_reduction = 0.77;
+        input_delay = 0;
+        format-icons = ["▁" "▂" "▃" "▄" "▅" "▆" "▇" "█"];
+        actions = {
+          on-right-click = "mode";
+        };
+       };
+
+      
+
+
+
       clock = {
-        format = "{:%F  %R}  ";
+        format = "{:%F   %R}  ";
         interval = 1;
       };
 
@@ -161,6 +195,7 @@ programs.waybar = {
           #window,
           #battery,
           #pulseaudio,
+          #cava,
           #network {
             padding: 4px 8px;
             background-color: rgba(0,0,0,0.5);
@@ -197,10 +232,31 @@ programs.waybar = {
             padding-left: 4px;
           }
 
-          #pulseaudio {
-            color: #0fb9b1;
-            padding-right: 14px;
+
+
+          #pulseaudio,
+          #cava {
+            color: #0fb9b1; 
+            background-color: rgba(0,0,0,0.5);
+            border-radius: 0; /* sin borde redondo para que encajen */
+            margin: 6px 0px; /* sin margen lateral */
           }
+
+          /* Bordes redondeados sólo en los extremos */
+          #pulseaudio {
+            padding: 4px 8px 4px 8px;
+            color: #0fb9b1; 
+            border-radius: 30px;
+          }
+
+          #cava {
+            padding: 4px 8px 8px 2px;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+          }
+
+          
+
 
           #cpu {
             color: #61afef;

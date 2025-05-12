@@ -18,7 +18,7 @@ while true; do
         echo "nixos-rebuild switch finalizado. Ejecutando comandos post-switch..."
         
         # Ejecutar Hyprland reload u otros comandos
-        hyprctl reload
+        #hyprctl reload
 
         # Esto es para matar el proceso de hyprpaper, esperar que realmente esté muerto, y después reiniciarlo.
 	# Si se usa homeManager no es necesario tener esto activado

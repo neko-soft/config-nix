@@ -24,6 +24,9 @@
 		# Terminal y Kitty
 		fastfetch asciiquarium cmatrix lf neo-cowsay fortune-kind pipes
 		nsnake cava sl cbonsai tty-clock glava cool-retro-term
+
+		# Extras
+		mpvpaper ffmpeg mpv swww
 		
 		# Hyprland y Desktop Environment
 		waybar rofi-wayland hyprpaper dunst libnotify
