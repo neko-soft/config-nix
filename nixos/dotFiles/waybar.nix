@@ -251,9 +251,8 @@ programs.waybar = {
 
           #cava {
             padding: 4px 8px 8px 2px;
-            border-top-right-radius: 30px;
-            border-bottom-right-radius: 30px;
-          }
+            border-radius: 30px;
+	  }
 
           
 
