@@ -23,7 +23,7 @@
 
 		# Terminal y Kitty
 		fastfetch asciiquarium cmatrix lf neo-cowsay fortune-kind pipes
-		nsnake cava sl cbonsai tty-clock glava cool-retro-term
+		nsnake cava sl cbonsai tty-clock glava cool-retro-term hollywood
 
 		# Extras
 		mpvpaper ffmpeg mpv swww
