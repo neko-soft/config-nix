@@ -244,13 +244,13 @@ programs.waybar = {
 
           /* Bordes redondeados sólo en los extremos */
           #pulseaudio {
-            padding: 4px 8px 4px 8px;
+            padding: 4px 8px;
             color: #0fb9b1; 
             border-radius: 30px;
           }
 
           #cava {
-            padding: 4px 8px 8px 2px;
+            padding: 4px 8px;
             border-radius: 30px;
 	  }
 
