@@ -13,7 +13,7 @@
 
 		# Aplicaciones básicas
 		firefox	spotify	thunderbird obsidian kitty vscode xfce.thunar neovim
-		p7zip discord playerctl pywal
+		p7zip discord playerctl pywal spicetify-cli
 
 		# Análisis
 		htop killall vnstat iftop
