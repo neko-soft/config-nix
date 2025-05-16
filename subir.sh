@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-# Este script es para copiar los archivos de configuración actuales del sistema
-# y subirlos a git, usando rsync para todas las copias.
 
 # --- Configuración ---
 
