@@ -190,7 +190,7 @@ programs.waybar = {
             background: rgba(27, 31, 50,0);
             color: #eeeeef;
             font-size: 14px;
-            font-family: "FiraCode Nerd Font Mono", monospace;
+            font-family: "Hack Nerd Font", "FiraCode Nerd Font", sans-serif;
           }
 
 

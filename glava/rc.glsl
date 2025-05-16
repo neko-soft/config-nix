@@ -1,1 +1,1 @@
-/nix/store/sa5i5gwb17sqfbws6r9s6h9m175bm6ih-home-manager-files/.config/glava/rc.glsl
+/nix/store/8k64fj06z7pv0yhiw760j61jlbh5szmq-home-manager-files/.config/glava/rc.glsl
