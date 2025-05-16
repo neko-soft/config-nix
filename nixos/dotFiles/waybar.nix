@@ -16,8 +16,10 @@ programs.waybar = {
                       "pulseaudio" "cava" "battery"];
 
       "hyprland/window" = {
-        format = "{}";
+        format = "{class}";
         separate-outputs = false;
+	icon = true;
+	icon-size = 24;
       };
       "hyprland/submap" = {
         format = "✌️ {}";
@@ -128,7 +130,7 @@ programs.waybar = {
         sample_bits = 8;
         method = "pulse";
         source = "auto";
-        sleep_timer = 1;
+        sleep_timer = 10;
         hide_on_silence = true;
         stereo = true;
         reverse = false;
@@ -239,7 +241,7 @@ programs.waybar = {
             color: #0fb9b1; 
             background-color: rgba(0,0,0,0.5);
             border-radius: 0; /* sin borde redondo para que encajen */
-            margin: 6px 0px; /* sin margen lateral */
+            margin: 6px 4px; /* sin margen lateral */
           }
 
           /* Bordes redondeados sólo en los extremos */

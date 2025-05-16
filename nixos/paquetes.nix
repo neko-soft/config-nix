@@ -13,7 +13,7 @@
 
 		# Aplicaciones básicas
 		firefox	spotify	thunderbird obsidian kitty vscode xfce.thunar neovim
-		p7zip discord playerctl pywal spicetify-cli
+		p7zip discord playerctl pywal
 
 		# Análisis
 		htop killall vnstat iftop
@@ -56,7 +56,8 @@
 
 		# Extras		
 		#polkit polkit_gnome
-		kdePackages.kirigami gvfs unzip nerdfonts ntfs3g os-prober adwaita-icon-theme
+		kdePackages.kirigami gvfs simple-mtpfs usbutils
+		unzip nerdfonts ntfs3g os-prober adwaita-icon-theme
 		git cachix #openvpn
 		openrgb-with-all-plugins
 		#opentabletdriver
@@ -64,6 +65,10 @@
  	 ];
 	#Home Manager
 	#programs.home-manager.enable = true;
+
+	services.udisks2.enable = true;
+	services.dbus.enable = true;
+	services.gvfs.enable = true;
 
 	# Power managment
 	services.power-profiles-daemon.enable = false;
