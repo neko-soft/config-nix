@@ -26,7 +26,7 @@
 		nsnake cava sl cbonsai tty-clock glava cool-retro-term hollywood
 
 		# Extras
-		mpvpaper ffmpeg mpv swww
+		mpvpaper ffmpeg mpv swww jq
 		
 		# Hyprland y Desktop Environment
 		waybar rofi-wayland hyprpaper dunst libnotify

@@ -16,15 +16,17 @@ programs.waybar = {
                       "pulseaudio" "cava" "battery"];
 
       "hyprland/window" = {
-        format = "{class} {title}";
-        separate-outputs = false;
+        format = "{title}";
+        separate-outputs = true;
 	icon = false;
 	icon-size = 24;
 	rewrite = {
-		"firefox (.*)" = " $1 ";
-		"nekonix@nixos: (.*)" = "  nekonix@nixos: $1";
-		"(.*) - thunar" = "  $1 - Thunar";
-		"(.*) - Visual Studio Code" = "󰨞 $1 - Visual Studio Code";
+		"(.*) — Mozilla Firefox" = " Firefox - $1";
+		"nekonix@nixos(.*)" = "󰄛 Kitty - nekonix@nixos$1";
+		"(.*) - Thunar" = "  Thunar - $1";
+		"(.*) - Visual Studio Code" = "󰨞 Visual Studio Code - $1";
+		"qBittorrent (.*)" = "󰰜 qBittorrent $1";
+		"Bottles" = "󰡔 Bottles $1";
 
 	};
       };
@@ -48,7 +50,7 @@ programs.waybar = {
           "9" = "9";
           "10" = "10";
           "-99" = "-99";
-          "active"= "";
+          "active"= " ";
           "default"= "";
 	  "spotify" = "";
 	  "obsidian" = "";
@@ -188,12 +190,9 @@ programs.waybar = {
             background: rgba(27, 31, 50,0);
             color: #eeeeef;
             font-size: 14px;
-            font-family: "Hack Nerd Font", "Symbols Nerd Font", "Font Awesome 6 Free", sans-serif;
+            font-family: "FiraCode Nerd Font Mono", monospace;
           }
 
-          #waybar .module {
-          font-family: "Hack Nerd Font", "Symbols Nerd Font", "Font Awesome 6 Free", sans-serif;
-          }
 
           #workspaces button {
             color: #c3aeff;
@@ -232,12 +231,12 @@ programs.waybar = {
   	  min-width: 0px;  /* o lo que se vea bien */
 	  }
 	  #battery {
-	  min-width: 60px;
+	  min-width: 50px;
 	  }
 
 
           #window {
-            color: #929db1;
+            color: #b4bcca;
           }
 
           #battery {
@@ -269,7 +268,6 @@ programs.waybar = {
           #pulseaudio,
           #cava {
             color: #0fb9b1; 
-            background-color: rgba(0,0,0,0.5);
 	  }
 
           

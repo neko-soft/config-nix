@@ -67,7 +67,7 @@ wayland.windowManager.hyprland = {
         "special:mail, on-created-empty: thunderbird"
         "special:discord, on-created-empty: discord"
         "1, monitor:HDMI-A-1, default:true, on-created-empty: firefox"
-	" 9, monitor: eDP-1, default:true, on-created-empty: qbittorrent"
+	"9, monitor:eDP-1, default:true, on-created-empty: qbittorrent"
         "10, monitor:eDP-1, on-created-empty: /home/nekonix/config-nix/scripts/adornosTerminal.sh"
       ];
 
@@ -179,10 +179,11 @@ wayland.windowManager.hyprland = {
         "$mainMod, M, exit,"
         "$mainMod, E, exec, $fileManager"
         "$mainMod, R, exec, $menu"
-        "$mainMod, P, pseudo"
+        "$mainMod, P, exec, ~/config-nix/scripts/mostrarFondo.sh"
         "$mainMod, S, togglesplit"
         "$mainMod, L, exec, swaylock"
         "$mainMod, F, fullscreen"
+	"$mainMod, period, exec, ~/config-nix/scripts/emojis.sh"
 
         # Cambiar la ventana con focus
         "$mainMod, left, movefocus, l"
