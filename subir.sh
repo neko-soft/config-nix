@@ -11,6 +11,7 @@ CONFIG_DIRS=(
     #"$HOME/.config/waybar"
     #"$HOME/.config/swaylock"
     #"/home/nekonix/wallpapers"
+    "$HOME/.config/glava"
     "/etc/nixos"
 )
 

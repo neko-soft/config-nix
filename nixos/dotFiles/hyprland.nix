@@ -56,7 +56,7 @@ wayland.windowManager.hyprland = {
     exec-once = [
         "waybar & dunst"
         "systemctl --user enable opentabletdriver.service --now"
-        "/home/nekonix/config-nix/refresco.sh"
+        "/home/nekonix/config-nix/scripts/refresco.sh"
         "systemctl --user start hyprpolkitagent"
         #"/nix/store/$(ls -la /nix/store | grep polkit-kde-agent | grep '^d' | awk '{print $9}' | head -n 1)/libexec/polkit-kde-authentication-agent-1"
       ];

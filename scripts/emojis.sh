@@ -4,7 +4,7 @@
 # URL del archivo oficial de emojis
 EMOJI_URL="https://unicode.org/Public/emoji/15.1/emoji-test.txt"
 # Ruta donde guardarás el archivo descargado (usa un directorio de cache o config)
-EMOJI_FILE="$HOME/config-nix/emoji-test.txt"
+EMOJI_FILE="$HOME/config-nix/scripts/emoji-test.txt"
 
 # --- Asegurarse de que existe el directorio ---
 mkdir -p "$(dirname "$EMOJI_FILE")"
