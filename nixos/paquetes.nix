@@ -32,6 +32,7 @@
 		waybar rofi-wayland hyprpaper dunst libnotify
 		#wlogout
 		swaylock-effects wl-clipboard grim slurp hyprpolkitagent
+		wtype
 
 		# Control de Hardware
 		lm_sensors pulseaudioFull brightnessctl	lshw
