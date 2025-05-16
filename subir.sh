@@ -10,7 +10,7 @@ CONFIG_DIRS=(
     #"$HOME/.config/kitty"
     #"$HOME/.config/waybar"
     #"$HOME/.config/swaylock"
-    "/home/nekonix/wallpapers"
+    #"/home/nekonix/wallpapers"
     "/etc/nixos"
 )
 

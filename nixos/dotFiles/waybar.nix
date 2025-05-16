@@ -16,13 +16,13 @@ programs.waybar = {
                       "pulseaudio" "cava" "battery"];
 
       "hyprland/window" = {
-        format = "{class}";
+        format = "{}";
         separate-outputs = false;
-	icon = true;
+	icon = false;
 	icon-size = 24;
       };
       "hyprland/submap" = {
-        format = "✌️ {}";
+        format = "✌️✌️ {}";
         max-length = 8;
         tooltip = true;
       };
@@ -50,7 +50,7 @@ programs.waybar = {
           #interface = "enp9s0f4u2";
           #tooltip-format-ethernet = "{ifname} ";
           interval = 1;
-          format = "{bandwidthDownBytes}   {bandwidthUpBytes} ";
+          format = "{bandwidthDownBytes}  {bandwidthUpBytes} ";
       };
 
       battery = {
@@ -77,7 +77,7 @@ programs.waybar = {
           "/sys/class/thermal/thermal_zone0/temp"
         ];
         critical-threshold = 80;
-        format-critical = "{temperatureC}°C  ";
+        format-critical = "{temperatureC}°C   ";
         format = "{temperatureC}°C {icon}";
         format-icons = ["" "" "" ""];
       };
@@ -179,13 +179,13 @@ programs.waybar = {
           }
 
           #workspaces button {
-            padding: 0 5px;
+            padding: 0px;
             color: #c3aeff;
           }
           /* Fix: active workspace doesn't show up */
           /* #workspaces button.focused { */
           #workspaces button.active {
-            color: #c3aeff;;
+            color: #c3aeff;
           }
 
           #custom-powermenu,
@@ -203,8 +203,22 @@ programs.waybar = {
             background-color: rgba(0,0,0,0.5);
             /*background-color: #303643;*/
             border-radius: 30px;
-            margin: 6px 4px;
+            margin: 6px 2px;
           }
+
+	  #cpu,
+	  #memory,
+	  #temperature,
+	  #network,
+	  #battery,
+	  #pulseaudio,
+	  #cava {
+  	  min-width: 0px;  /* o lo que se vea bien */
+	  }
+	  #battery {
+	  min-width: 60px;
+	  }
+
 
           #window {
             color: #929db1;
@@ -240,20 +254,6 @@ programs.waybar = {
           #cava {
             color: #0fb9b1; 
             background-color: rgba(0,0,0,0.5);
-            border-radius: 0; /* sin borde redondo para que encajen */
-            margin: 6px 4px; /* sin margen lateral */
-          }
-
-          /* Bordes redondeados sólo en los extremos */
-          #pulseaudio {
-            padding: 4px 8px;
-            color: #0fb9b1; 
-            border-radius: 30px;
-          }
-
-          #cava {
-            padding: 4px 8px;
-            border-radius: 30px;
 	  }
 
           
@@ -278,7 +278,6 @@ programs.waybar = {
 
           #clock {
             color: #f7bfbf;
-            margin-left: 8px;
             /* opacity: 0.7; */
             /* font-size: 18px; */
           }
