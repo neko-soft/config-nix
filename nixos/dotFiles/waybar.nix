@@ -16,12 +16,12 @@ programs.waybar = {
                       "pulseaudio" "cava" "battery"];
 
       "hyprland/window" = {
-        format = "{title}";
+        format = "{class} {title}";
         separate-outputs = false;
 	icon = false;
 	icon-size = 24;
 	rewrite = {
-		"(.*) — Mozilla Firefox" = " $1 - Mozilla Firefox";
+		"firefox (.*)" = " $1 ";
 		"nekonix@nixos: (.*)" = "  nekonix@nixos: $1";
 		"(.*) - thunar" = "  $1 - Thunar";
 		"(.*) - Visual Studio Code" = "󰨞 $1 - Visual Studio Code";
@@ -50,8 +50,18 @@ programs.waybar = {
           "-99" = "-99";
           "active"= "";
           "default"= "";
+	  "spotify" = "";
+	  "obsidian" = "";
+	  "mail" = "";
         };
-
+	#window-rewrite-default = "?";
+	#window-rewrite = {
+	#	"class<firefox>" = "󰈹 ";
+	#	"class<kitty>" = " ";
+	#	"class<Code>" = "󰨞 ";
+	#	"class<spotify>" = " ";
+	#};
+	show-special = true;
       };
       network = {
           #interface = "enp9s0f4u2";
