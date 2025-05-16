@@ -16,10 +16,17 @@ programs.waybar = {
                       "pulseaudio" "cava" "battery"];
 
       "hyprland/window" = {
-        format = "{}";
+        format = "{title}";
         separate-outputs = false;
 	icon = false;
 	icon-size = 24;
+	rewrite = {
+		"(.*) — Mozilla Firefox" = " $1 - Mozilla Firefox";
+		"nekonix@nixos: (.*)" = "  nekonix@nixos: $1";
+		"(.*) - thunar" = "  $1 - Thunar";
+		"(.*) - Visual Studio Code" = "󰨞 $1 - Visual Studio Code";
+
+	};
       };
       "hyprland/submap" = {
         format = "✌️✌️ {}";
@@ -179,7 +186,6 @@ programs.waybar = {
           }
 
           #workspaces button {
-            padding: 0px;
             color: #c3aeff;
           }
           /* Fix: active workspace doesn't show up */
@@ -200,7 +206,7 @@ programs.waybar = {
           #cava,
           #network {
             padding: 4px 8px;
-            background-color: rgba(0,0,0,0.5);
+            background-color: rgba(0,0,0,0.8);
             /*background-color: #303643;*/
             border-radius: 30px;
             margin: 6px 2px;
