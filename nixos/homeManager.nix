@@ -27,8 +27,8 @@
   ./dotFiles/glava.nix
   ./dotFiles/rofi.nix
       ];
-      home.packages = with pkgs; [ nerdfonts font-awesome noto-fonts noto-fonts-emoji
-      hack-font fira-code fira-code-symbols fira-code-nerdfont];
+      home.packages = with pkgs; [ font-awesome noto-fonts noto-fonts-emoji
+      hack-font fira-code fira-code-symbols];
       fonts.fontconfig.enable = true;
       home.stateVersion = "24.11"; # Ajusta según la versión de NixOS
 

@@ -16,8 +16,8 @@
 
 
 
-	boot.extraModulePackages = [ config.boot.kernelPackages.r8168];
- 	boot.blacklistedKernelModules = [ "r8169" ];
+	#boot.extraModulePackages = [ config.boot.kernelPackages.r8168];
+ 	#boot.blacklistedKernelModules = [ "r8169" ];
 	  boot.kernel.sysctl = {
     		"net.core.default_qdisc" = "fq";
    		"net.ipv4.tcp_congestion_control" = "bbr";

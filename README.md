@@ -1,8 +1,8 @@
 # Configs de NixOS Personal
 
-La idea de este repo es poner los archivos config de mi sistema con NixOS.
+En este repo se encuentra la configuración de mi sistema NixOS personal.
 
-También hay unos scrips que automatizan ciertos procesos.
+
 
 # Pendientes
 
@@ -25,11 +25,6 @@ También hay unos scrips que automatizan ciertos procesos.
 
 ## Colores según Wallpaper
 - [ ] Hacer un script que cambie los colores de estilo y temas de kitty, hyprland, waybar, rofi, swaylock y GRUB según los colores del fondo de pantalla. Esto puede hacerse con un script que analice los colores de la imagen del wallpaper, y modificar los archivos `.nix` correspondientes (principalmente [homeManager.nix](nixos/homeManager.nix)y [servicios.nix](nixos/servicios.nix)) para que todo tenga una armonía de colores
-sagsdg
-sdg
-sdg
-sd
-gsd
 
 
 

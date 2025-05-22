@@ -17,13 +17,13 @@
 		./inestables.nix
     	#./servicios.nix
 		<home-manager/nixos>
-		./cachix.nix
+		#./cachix.nix
 		./homeManager.nix
 		#./nas.nix
     ];
 
 
-  boot.initrd.luks.devices."luks-dc04dcac-86b6-45d8-b72c-25e6dce9e86c".device = "/dev/disk/by-uuid/dc04dcac-86b6-45d8-b72c-25e6dce9e86c";
+  boot.initrd.luks.devices."luks-aa2b9e15-8298-4378-92ae-f5d0bbcd33fe".device = "/dev/disk/by-uuid/aa2b9e15-8298-4378-92ae-f5d0bbcd33fe";
 
 	nix.settings.experimental-features = [ "nix-command" "flakes" ];
 

@@ -58,10 +58,12 @@
 		# Extras		
 		#polkit polkit_gnome
 		kdePackages.kirigami gvfs simple-mtpfs usbutils
-		unzip nerdfonts ntfs3g os-prober adwaita-icon-theme
-		git cachix #openvpn
+		unzip nerd-fonts.hack ntfs3g os-prober adwaita-icon-theme
+		git #openvpn
 		openrgb-with-all-plugins
 		#opentabletdriver
+
+		nerd-fonts.jetbrains-mono
 
  	 ];
 	#Home Manager
