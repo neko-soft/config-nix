@@ -12,7 +12,11 @@
 		
 
 		# Aplicaciones básicas
-		firefox	spotify	thunderbird obsidian kitty vscode xfce.thunar neovim
+		#firefox
+		spotify	thunderbird obsidian kitty vscode 
+		xfce.thunar
+		neovim
+		vlc
 		p7zip discord playerctl pywal
 
 		# Análisis
@@ -20,6 +24,7 @@
 
 		# Programas Creativos		
 		#reaper davinci-resolve krita
+		#davinci-resolve
 
 		# Terminal y Kitty
 		fastfetch asciiquarium cmatrix lf neo-cowsay fortune-kind pipes
@@ -58,20 +63,34 @@
 		# Extras		
 		#polkit polkit_gnome
 		kdePackages.kirigami gvfs simple-mtpfs usbutils
-		unzip nerd-fonts.hack ntfs3g os-prober adwaita-icon-theme
+		unzip nerd-fonts.hack ntfs3g os-prober #adwaita-icon-theme
 		git #openvpn
-		openrgb-with-all-plugins
+		#openrgb-with-all-plugins
 		#opentabletdriver
+
+		rocmPackages.clr
+		rocmPackages.rocminfo
 
 		nerd-fonts.jetbrains-mono
 
  	 ];
+
+	hardware.amdgpu.opencl.enable = true;
 	#Home Manager
 	#programs.home-manager.enable = true;
+	programs.steam.enable = true;
+	programs.obs-studio.enable = true;
+	programs.firefox.enable = true;
 
 	services.udisks2.enable = true;
 	services.dbus.enable = true;
 	services.gvfs.enable = true;
+
+	nix.gc = {
+		automatic = true;
+		dates = "weekly";
+		options = "--delete-older-than 7d";
+	};
 
 	# Power managment
 	services.power-profiles-daemon.enable = false;
@@ -100,10 +119,10 @@
 	security.polkit.enable = true;
 
 	# RGB
-	services.hardware.openrgb.enable = true;
+	services.hardware.openrgb.enable = false;
 	hardware.opentabletdriver = {
-		enable = true;
-		daemon.enable = true;
+		enable = false;
+		daemon.enable = false;
 	};
 
 
@@ -125,7 +144,7 @@
 	# Para MySQL
 
 	services.mysql = {
-		enable = true;
+		enable = false;
 		package = pkgs.mariadb;
 	};
 

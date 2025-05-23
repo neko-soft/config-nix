@@ -4,20 +4,19 @@
 
 { 
 
-	networking.hostName = "nixos"; # Define your hostname.
+	networking = {
+		hostName = "nixos"; # Define your hostname.
+		networkmanager.enable = true;
+		firewall = {
+			enable = true;
+			allowedUDPPorts = [64837];
+			allowedTCPPorts = [64837];
+			allowPing = false;
+		};	
+	};
 	#networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+	services.openssh.enable = false;
 
-	# Configure network proxy if necessary
-	# networking.proxy.default = "http://user:password@proxy:port/";
-	# networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-	# Enable networking
-	networking.networkmanager.enable = true;
-
-
-
-	#boot.extraModulePackages = [ config.boot.kernelPackages.r8168];
- 	#boot.blacklistedKernelModules = [ "r8169" ];
 	  boot.kernel.sysctl = {
     		"net.core.default_qdisc" = "fq";
    		"net.ipv4.tcp_congestion_control" = "bbr";

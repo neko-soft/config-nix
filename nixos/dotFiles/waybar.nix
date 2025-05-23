@@ -51,10 +51,10 @@ programs.waybar = {
           "10" = "10";
           "-99" = "-99";
           "active"= " ";
-          "default"= "";
-	  "spotify" = "";
-	  "obsidian" = "";
-	  "mail" = "";
+          "default"= " ";
+	  "spotify" = " ";
+	  "obsidian" = " ";
+	  "mail" = " ";
         };
 	#window-rewrite-default = "?";
 	#window-rewrite = {
@@ -231,7 +231,7 @@ programs.waybar = {
   	  min-width: 0px;  /* o lo que se vea bien */
 	  }
 	  #battery {
-	  min-width: 50px;
+	  min-width: 55px;
 	  }
 
 

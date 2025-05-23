@@ -4,17 +4,20 @@
 
 { 
 
-	# Bootloader. Está activado el Grub, además del OS prober por si hay Windows instalado
-	boot.loader = {
+# Bootloader. Está activado el Grub
+boot.loader = {
 	#systemd-boot.enable = true;
 	efi.canTouchEfiVariables = true;
 	grub = {
 		enable = true;
 		devices = [ "nodev" ];
 		efiSupport = true;
-		useOSProber = true;
+		useOSProber = false;
 		default = 0;
 		splashImage = /home/nekonix/wallpapers/Kath.png;
-		};
+		extraConfig = ''
+			GRUB_DISABLE_SUBMENU=y
+		'';
 	};
+};
 }

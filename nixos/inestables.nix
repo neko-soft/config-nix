@@ -11,5 +11,6 @@ in
     krita
     #opentabletdriver
     bottles
+    #davinci-resolve
   ];
 }

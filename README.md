@@ -4,27 +4,21 @@ En este repo se encuentra la configuración de mi sistema NixOS personal.
 
 
 
-# Pendientes
+# Tareas Pendientes
 
-## Documentación
-- [ ] Explicar bien cómo funciona todo esto. En resumen, se debería ejecuar el script [actualizar.sh](actualizar.sh) y listo. El propósito es poder reconstruir un sistema de NixOS con un solo script en vez de tener que configurar todo a mano.  
-- [ ] Ordenar mejor el [README.md](README.md). Agregar imágenes y emojis para que no sea una masa de texto que dan ganas de vomitar con sólo mirarla.
-
-## Script [refresco.sh](refresco.sh)
-- [ ] Verificar primero si hay cambios en los archivos de hyprland, hyprpaper y waybar antes de ejecutar los comandos, para evitar recargas innecesarias.
-
-## Script [actualizar.sh](actualizar.sh)
-- [ ] Este script antes funcionaba con los archivos .config, pero ahora se maneja todo desde el Home-Manager, así que hay varias cosas rebundantes.
-- [ ] Asegurarse de mantener la linea `boot.initrd.luks.devices` igual que está en el archivo original antes de reemplazar todo el resto.
-- [ ] Cambiar todos los archivos que tengan paths o referencias hacia el nombre de usuario por el nombre del usuario actual, porque ahora está todo con `nekonix`. Hasta donde se sabe, hay que cambiar estos archivos:
-    - [ ] [homeManager.nix](nixos/homeManager.nix)
-    - [ ] [servicios.nix](nixos/servicios.nix)
-
-## Wallpapers
-- [ ] Hacer un script que permita cambiar el fondo de pantalla automáticamente de hyprland y/o GRUB. Esto tiene que hacerse cambiando las configuraciones de los archivos [homeManager.nix](nixos/homeManager.nix) (en la sección de `".config/hypr/hyprpaper.conf".text = ''`) y [bootLoader.nix](nixos/bootLoader.nix). Creo -pero no estoy seguro- que GRUB sólo admite formatos `.png`, así que el script debería ser capaz de convertir otros formatos a `.png`.
-
-## Colores según Wallpaper
-- [ ] Hacer un script que cambie los colores de estilo y temas de kitty, hyprland, waybar, rofi, swaylock y GRUB según los colores del fondo de pantalla. Esto puede hacerse con un script que analice los colores de la imagen del wallpaper, y modificar los archivos `.nix` correspondientes (principalmente [homeManager.nix](nixos/homeManager.nix)y [servicios.nix](nixos/servicios.nix)) para que todo tenga una armonía de colores
+- [ ] Arreglar [README.md](README.md), explicando todo con más detalle, especialmente los [scripts](scripts/). También incluir los atajos de teclado que se usan en [hyprland.nix](nixos/dotFiles/hyprland.nix).
+- [ ] Ordenar bien las fuentes en los archivos [paquetes.nix](nixos/paquetes.nix) y [homeManager.nix](nixos/homeManager.nix).
+- [ ] Agregar todas las configuraciones de [glava](glava/) a [glava.nix](nixos/dotFiles/glava.nix).
+- [ ] Modularizar todo con `flakes`.
+- [ ] Crear un script que cambie de fondo de pantalla, y según este, cambie los colores de [hyprland.nix](nixos/dotFiles/hyprland.nix), [waybar](nixos/dotFiles/waybar.nix), [dunst](nixos/dotFiles/dunst.nix), [glava](nixos/dotFiles/glava.nix), [cava](nixos/dotFiles/cava.nix), [kitty](nixos/dotFiles/kitty.nix), [rofi](nixos/dotFiles/rofi.nix) y [swaylock](nixos/dotFiles/swaylock.nix).
+- [x] ~~Configurar las excepciones del firewall en [networkAndHost.nix](nixos/networkAndHost.nix).~~
+- [ ] Agregar en el script [instalar.sh](scripts/instalar.sh) la opción para descargar automáticamente los fondos de pantallas de Google Drive.
+- [ ] Reordenar archivos de configuración `.nix` para que exista mayor consistencia con los nombres y sus contenidos.
 
 
-
+# Últimos Cambios
+- Se reordenan las tareas pendientes y la estructura del [README.md](README.md).
+- Fueron eliminados paquetes y servicios no utilizados, como `MySQL`, `Open Tablet Driver` y `OpenRGB`.
+- La configuración [networkAndHost.nix](nixos/networkAndHost.nix) fue reordenada, y se bloquean los pings en IPv4.
+  
+Para ver todos los cambios, ir a [CHANGELOG.md](CHANGELOG.md)

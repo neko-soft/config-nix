@@ -1,3 +1,9 @@
+# 2025-05-22
+
+- Se reordenan las tareas pendientes y la estructura del [README.md](README.md).
+- Fueron eliminados paquetes y servicios no utilizados, como `MySQL`, `Open Tablet Driver` y `OpenRGB`.
+- La configuración [networkAndHost.nix](nixos/networkAndHost.nix) fue reordenada, y se bloquean los pings en IPv4.
+
 # 2025-05-21
 
 - [refresco.sh](scripts/refresco.sh) quedó obsoleto ya que ahora todos los dotFiles se manejan con [homeManager.nix](nixos/homeManager.nix).

@@ -23,18 +23,25 @@
 	# Esto habilita Hyprland.
 	# Tener en cuenta que hay que agregar varias cosas si usas NVIDIA
 	programs.hyprland.enable = true;
-	hardware.graphics.enable = true;
+	hardware.graphics = {
+		enable = true;
+		package = pkgs.mesa;
+		extraPackages = [pkgs.rocmPackages.clr];
+	};
 	
 	# Impresora
 	services.printing.enable = false;
 
-	qt = {
-		enable = true;
-	};
+	qt.enable = true;
+	
 
 	# XDG Portal
 	xdg.portal.enable = true;
-	xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
+	xdg.portal.extraPortals = [
+		pkgs.xdg-desktop-portal-gtk
+		pkgs.xdg-desktop-portal-hyprland
+		pkgs.kdePackages.xdg-desktop-portal-kde
+		];
 
 
 	# Audio

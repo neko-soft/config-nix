@@ -72,7 +72,7 @@ wayland.windowManager.hyprland = {
       ];
 
       "$terminal" = "kitty";
-      "$fileManager" = "thunar";
+      "$fileManager" = "dolphin";
       "$menu" = "rofi -show drun -show-icons";
       # See https://wiki.hyprland.org/Configuring/Keywords/ for more
       "$mainMod" = "SUPER";
