@@ -20,17 +20,26 @@
       imports = [
         ./dotFiles/swaylock.nix
         ./dotFiles/cava.nix
-	./dotFiles/dunst.nix
-	./dotFiles/waybar.nix
-	./dotFiles/hyprland.nix
-  ./dotFiles/kitty.nix
-  ./dotFiles/glava.nix
-  ./dotFiles/rofi.nix
+        ./dotFiles/dunst.nix
+        ./dotFiles/waybar.nix
+        ./dotFiles/hyprland.nix
+        ./dotFiles/kitty.nix
+        ./dotFiles/rofi.nix
+        #./dotFiles/glava.nix
+
+        ./dotFiles/glava/bars.nix
+        ./dotFiles/glava/circle.nix
+        ./dotFiles/glava/envs.nix
+        ./dotFiles/glava/glava.nix
+        ./dotFiles/glava/graph.nix
+        ./dotFiles/glava/radial.nix
+        ./dotFiles/glava/util.nix
+        ./dotFiles/glava/wave.nix
       ];
       home.packages = with pkgs; [ font-awesome noto-fonts noto-fonts-emoji
       hack-font fira-code fira-code-symbols];
       fonts.fontconfig.enable = true;
-      home.stateVersion = "24.11"; # Ajusta según la versión de NixOS
+      home.stateVersion = "25.05"; # Ajusta según la versión de NixOS
 
 
         wayland.windowManager.hyprland.systemd.variables = ["--all"];

@@ -1,3 +1,53 @@
+{ config, pkgs, lib, ... }:
+
+{
+
+home.file = {
+
+  ".config/glava/util/premultiply.frag".text = ''
+
+#if PREMULTIPLY_ALPHA == 0
+#error __disablestage
+#endif
+
+#request uniform "prev" tex
+uniform sampler2D tex;
+
+out vec4 fragment;
+in vec4 gl_FragCoord;
+
+void main() {
+    fragment = texelFetch(tex, ivec2(gl_FragCoord.x, gl_FragCoord.y), 0);
+    #if PREMULTIPLY_ALPHA > 0
+    fragment.rgb *= fragment.a;
+    #endif
+}
+
+    
+  '';
+
+  ".config/glava/util/smooth_pass.frag".text = ''
+
+uniform sampler1D tex;
+uniform int sz;
+uniform int w;
+
+out vec4 fragment;
+in vec4 gl_FragCoord;
+
+#undef PRE_SMOOTHED_AUDIO
+#define PRE_SMOOTHED_AUDIO 0
+
+#include ":util/smooth.glsl"
+
+void main() {
+    fragment = vec4(smooth_audio(tex, sz, gl_FragCoord.x / w), 0, 0, 0);
+}
+
+    
+  '';
+
+  ".config/glava/util/smooth.glsl".text = ''
  
 #ifndef _SMOOTH_GLSL /* include gaurd */
 #define _SMOOTH_GLSL
@@ -95,3 +145,10 @@ float smooth_audio_adj(in sampler1D tex, int tex_sz, highp float idx, highp floa
 #undef PI
 #endif
 #endif /* _SMOOTH_GLSL */
+
+    
+  '';
+
+};
+
+}
