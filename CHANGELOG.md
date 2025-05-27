@@ -1,3 +1,6 @@
+# 2025-05-26
+- Se reordenan los [dotFiles](nixos/dotFiles) de [glava.nix](nixos/dotFiles/glava/glava.nix) de tal forma que queden agrupados en la subcarpeta [nixos/dotFiles/glava](nixos/dotFiles/glava/).
+
 # 2025-05-22
 
 - Se reordenan las tareas pendientes y la estructura del [README.md](README.md).
