@@ -25,16 +25,15 @@
         ./dotFiles/hyprland.nix
         ./dotFiles/kitty.nix
         ./dotFiles/rofi.nix
-        #./dotFiles/glava.nix
 
-        ./dotFiles/glava/bars.nix
-        ./dotFiles/glava/circle.nix
-        ./dotFiles/glava/envs.nix
-        ./dotFiles/glava/glava.nix
-        ./dotFiles/glava/graph.nix
-        ./dotFiles/glava/radial.nix
-        ./dotFiles/glava/util.nix
-        ./dotFiles/glava/wave.nix
+        #./dotFiles/glava/bars.nix
+        #./dotFiles/glava/circle.nix
+        #./dotFiles/glava/envs.nix
+        #./dotFiles/glava/glava.nix
+        #./dotFiles/glava/graph.nix
+        #./dotFiles/glava/radial.nix
+        #./dotFiles/glava/util.nix
+        #./dotFiles/glava/wave.nix
       ];
       home.packages = with pkgs; [ font-awesome noto-fonts noto-fonts-emoji
       hack-font fira-code fira-code-symbols];

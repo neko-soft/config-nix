@@ -231,7 +231,7 @@ programs.waybar = {
   	  min-width: 0px;  /* o lo que se vea bien */
 	  }
 	  #battery {
-	  min-width: 55px;
+	  min-width: 50px;
 	  }
 
 
@@ -295,7 +295,10 @@ programs.waybar = {
             /* opacity: 0.7; */
             /* font-size: 18px; */
           }
-
+	  
+	  window#waybar.empty #window {
+		background-color: transparent;
+	  }
         '';
 
 

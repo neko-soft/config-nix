@@ -5,6 +5,9 @@
 home.file = {
 
   ".config/glava/wave.glsl".text = ''
+@module wave
+#include wave/1.frag
+#include wave/2.frag
 /* min (vertical) line thickness */
 #define MIN_THICKNESS 1
 
@@ -24,7 +27,6 @@ home.file = {
   '';
 
   ".config/glava/wave/1.frag".text = ''
-
 layout(pixel_center_integer) in vec4 gl_FragCoord;
 
 #request uniform "screen" screen
@@ -63,12 +65,9 @@ void main() {
         fragment = vec4(0.105, 0.121, 0.196, 0.9);
     }
 }
-
-
   '';
 
   ".config/glava/wave/2.frag".text = ''
-
 layout(pixel_center_integer) in vec4 gl_FragCoord;
 
 #request uniform "prev" tex
@@ -101,8 +100,6 @@ void main() {
             fragment = OUTLINE;
     }
 }
-
-
   '';
 
 };

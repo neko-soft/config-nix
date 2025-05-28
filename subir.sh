@@ -14,7 +14,7 @@ CONFIG_DIRS=(
     #"$HOME/.config/waybar"
     #"$HOME/.config/swaylock"
     #"/home/nekonix/wallpapers" # Asumiendo que quieres respaldar todo el contenido
-    #"$HOME/.config/glava"
+    "$HOME/.config/glava"
     # /etc/nixos lo manejaremos aparte por la exclusion
 )
 
@@ -27,6 +27,7 @@ CONFIG_FILES=(
 
 echo "📂 Copiando configuraciones a $DEST ..."
 sudo rm -rf "$DEST/nixos/"
+
 
 # Copiar /etc/nixos usando rsync para excluir hardware-configuration.nix
 # rsync -a: modo archivo (mantiene permisos, timestamps, enlaces, recursivo)

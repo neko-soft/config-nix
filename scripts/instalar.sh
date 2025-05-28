@@ -4,8 +4,10 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(dirname "$SCRIPT_DIR")"
 
 # Copiar .bashrc 
-
 sudo cp "$REPO_ROOT/.bashrc" "$HOME/"
+
+# Copiar los archivos de Glava
+sudo cp -r "$REPO_ROOT/glava/" "$HOME/.config/"
 
 # Agregar canales
 
