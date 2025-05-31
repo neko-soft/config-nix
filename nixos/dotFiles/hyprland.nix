@@ -42,7 +42,7 @@ wayland.windowManager.hyprland = {
       "XCURSOR_SIZE,24"
       "QT_QPA_PLATFORMTHEME,qt5ct"
       "XDG_CURRENT_DESKTOP,Hyprland"
-      #"GTK_THEME,Adwaita:dark"
+      "GTK_THEME,Adwaita:dark"
       "QT_STYLE_OVERRIDE,Breeze"
       "QT_QPA_PLATFORM,wayland"
 

@@ -115,7 +115,7 @@ void render_side(in sampler1D tex, float idx) {
     if (pos + 1.5 <= s) {
         fragment = COLOR;
     } else {
-        fragment = vec4(0, 0, 0, 0);
+        fragment = vec4(0.105, 0.121, 0.196, 0.9);
     }
 }
 

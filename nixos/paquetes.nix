@@ -121,8 +121,8 @@
 	# RGB
 	services.hardware.openrgb.enable = false;
 	hardware.opentabletdriver = {
-		enable = false;
-		daemon.enable = false;
+		enable = true;
+		daemon.enable = true;
 	};
 
 
@@ -130,6 +130,7 @@
 	virtualisation = {
 		libvirtd = {
 			enable = true;
+			onShutdown = "shutdown";
 			qemu = {
 				swtpm.enable = true;
 				ovmf.enable = true;
@@ -162,13 +163,13 @@
 	};
 
 	# Permite algunos paquetes inseguros que son necesarios para algunas cosas
-	nixpkgs.config.permittedInsecurePackages = [
-		"electron-25.0.0"
-		"qbittorrent-4.6.4"
-		"dotnet-runtime-6.0.36"
-		"dotnet-sdk-wrapped-6.0.428"
-		"dotnet-sdk-6.0.428"
-	];
+	#nixpkgs.config.permittedInsecurePackages = [
+		#"electron-25.0.0"
+		#"qbittorrent-4.6.4"
+		#"dotnet-runtime-6.0.36"
+		#"dotnet-sdk-wrapped-6.0.428"
+		#"dotnet-sdk-6.0.428"
+	#];
 
 	# Fuentes para las letras y caracteres
 	fonts.packages = with pkgs ; [

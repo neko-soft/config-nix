@@ -50,7 +50,7 @@ float apply_smooth(float theta) {
 }
 
 void main() {
-    fragment = vec4(0, 0, 0, 0);
+    fragment = vec4(0.105, 0.121, 0.196, 0.9);
     float
         dx = gl_FragCoord.x - (screen.x / 2),
         dy = gl_FragCoord.y - (screen.y / 2);

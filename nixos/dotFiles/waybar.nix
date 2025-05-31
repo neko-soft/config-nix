@@ -10,7 +10,7 @@ programs.waybar = {
       layer = "top";
       position = "top";
       margin-bottom = 0;
-      modules-left = [ "clock" "hyprland/workspaces"];
+      modules-left = [ "clock" "hyprland/workspaces" ];
       modules-center = [ "hyprland/window"];
       modules-right = [ "network" "temperature" "memory" "cpu"
                       "pulseaudio" "cava" "battery"];

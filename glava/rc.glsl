@@ -185,7 +185,7 @@ See documentation for more details. */
 
    This value has a _massive_ effect on FFT performance and
    quality for some modules. */
-#request setbufsize 512
+#request setbufsize 1024
 
 /* PulseAudio sample rate. Lower values can add 'gravity' to
    FFT output, but can also reduce accuracy. Most hardware
@@ -198,7 +198,7 @@ See documentation for more details. */
    This option does nothing when using the "fifo" audio
    backend. Instead, an ideal rate should be be configured
    in the application generating the output. */
-#request setsamplerate 22050
+#request setsamplerate 44100
 
 /*                    ** DEPRECATED **
    Force window geometry (locking the window in place), useful

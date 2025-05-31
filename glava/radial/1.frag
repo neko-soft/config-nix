@@ -111,5 +111,5 @@ void main() {
             #endif
         }
     }
-    fragment = APPLY_FRAG(fragment, vec4(0, 0, 0, 0)); /* default frag color */
+    fragment = vec4(0.105, 0.121, 0.196, 0.9); /* default frag color */
 }
