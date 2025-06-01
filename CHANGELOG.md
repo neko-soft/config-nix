@@ -1,3 +1,7 @@
+# 2025-05-31
+- [x] Se crea el script [ventiladores.sh](scripts/ventiladores.sh). Este script controla la velocidad de los ventiladores según al temperatura de la CPU. Este script sólo funciona en laptops OMEN de HP y es muy importante que NO se utlice en otras laptops o dispositivos. Si bien existe un chequeo que verifica el nombre del dispositivo para asegurarse de que sea un OMEN, lo ideal es eliminar el script o comentar su ejecución en [hyprland.nix](nixos/dotFiles/hyprland.nix).
+
+
 # 2025-05-27
 - [x] Se agrega el copiado de archivos de configuración de `glava` en [subir.sh](subir.sh).
 - [x] Se agrega el pegado de archivos de configuración de `glava` en [instalar.sh](scripts/instalar.sh).

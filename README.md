@@ -19,8 +19,7 @@ En este repo se encuentra la configuración de mi sistema NixOS personal.
 
 
 # Tareas completas
-- [x] Se agrega el copiado de archivos de configuración de `glava` en [subir.sh](subir.sh).
-- [x] Se agrega el pegado de archivos de configuración de `glava` en [instalar.sh](scripts/instalar.sh).
-- [x] Se añaden scripts que muestran notificaciones del estado de la batería (cargado, descargando, llena), alertas de batería baja para menos del 15%, y alertas de temperatura de CPU para valores mayores a 80°C y 90°C. Estos scripts son [estadoBateria.sh](scripts/estadoBateria.sh), [alertaBateria.sh](scripts/alertaBateria.sh) y [temperaturaCpu.sh](scripts/temperaturaCpu.sh) respectivamente.
+- [x] Se crea el script [ventiladores.sh](scripts/ventiladores.sh). Este script controla la velocidad de los ventiladores según al temperatura de la CPU. Este script sólo funciona en laptops OMEN de HP y es muy importante que NO se utlice en otras laptops o dispositivos. Si bien existe un chequeo que verifica el nombre del dispositivo para asegurarse de que sea un OMEN, lo ideal es eliminar el script o comentar su ejecución en [hyprland.nix](nixos/dotFiles/hyprland.nix).
+
   
 Para ver todos los cambios, ir a [CHANGELOG.md](CHANGELOG.md)

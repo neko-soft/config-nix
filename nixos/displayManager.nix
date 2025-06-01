@@ -33,7 +33,19 @@
 	services.printing.enable = false;
 
 	qt.enable = true;
-	
+
+
+	# Ventiladores
+	boot.kernelModules = [ "ec_sys" ];
+  	boot.extraModprobeConfig = ''
+    		options ec_sys write_support=1
+  	'';
+	boot.supportedFilesystems = ["debugfs"];
+	fileSystems."/sys/kernel/debug" = {
+		fsType = "debugfs";
+		device = "debugfs";
+	};
+
 
 	# XDG Portal
 	xdg.portal.enable = true;

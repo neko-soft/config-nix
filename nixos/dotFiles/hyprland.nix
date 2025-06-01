@@ -63,6 +63,7 @@ wayland.windowManager.hyprland = {
 	"/home/nekonix/config-nix/scripts/alertaBateria.sh"
 	"/home/nekonix/config-nix/scripts/estadoBateria.sh"
 	"/home/nekonix/config-nix/scripts/temperaturaCpu.sh"
+	"sudo /home/nekonix/config-nix/scripts/ventiladores.sh"
         #"/nix/store/$(ls -la /nix/store | grep polkit-kde-agent | grep '^d' | awk '{print $9}' | head -n 1)/libexec/polkit-kde-authentication-agent-1"
       ];
 

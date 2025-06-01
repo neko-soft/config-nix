@@ -18,6 +18,8 @@
 		neovim
 		vlc
 		p7zip discord playerctl pywal
+		google-chrome
+		librewolf
 
 		# Análisis
 		htop killall vnstat iftop

@@ -9,8 +9,8 @@
 		networkmanager.enable = true;
 		firewall = {
 			enable = true;
-			allowedUDPPorts = [8999 6771];
-			allowedTCPPorts = [8999];
+			allowedUDPPorts = [58646 6771];
+			allowedTCPPorts = [58646];
 			allowPing = false;
 		};	
 	};
@@ -44,6 +44,21 @@
 		description = "NekoNix";
 		extraGroups = [ "networkmanager" "wheel" ];
 		packages = with pkgs; [];
+	};
+
+	security.sudo = {
+		enable = true;
+		extraRules = [
+		 {
+		  users = ["nekonix"];
+		  commands = [
+		   {
+		    command = "/home/nekonix/config-nix/scripts/ventiladores.sh";
+		    options = [ "NOPASSWD" "SETENV" ];
+		   }
+		  ];
+		 }
+		]; 
 	};
 
 
