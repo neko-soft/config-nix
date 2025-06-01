@@ -19,7 +19,6 @@ En este repo se encuentra la configuración de mi sistema NixOS personal.
 
 
 # Tareas completas
-- [x] Se crea el script [ventiladores.sh](scripts/ventiladores.sh). Este script controla la velocidad de los ventiladores según al temperatura de la CPU. Este script sólo funciona en laptops OMEN de HP y es muy importante que NO se utlice en otras laptops o dispositivos. Si bien existe un chequeo que verifica el nombre del dispositivo para asegurarse de que sea un OMEN, lo ideal es eliminar el script o comentar su ejecución en [hyprland.nix](nixos/dotFiles/hyprland.nix).
-
+- [x] Ajuste de la curva de velociad de ventiladores en el script [ventiladores.sh](scripts/ventiladores.sh) para que sea más agresiva. Se agrega una histéresis de 5°C para evitar cambios constantes si la temperatura oscila entre uno de los puntos de cambio.
   
 Para ver todos los cambios, ir a [CHANGELOG.md](CHANGELOG.md)

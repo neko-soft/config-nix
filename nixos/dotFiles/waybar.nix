@@ -76,13 +76,15 @@ programs.waybar = {
         interval = 1;
         states = {
           good = 95;
-          warning = 30;
-          critical = 15;
+          warning = 50;
+          critical = 20;
         };
         format = "{capacity}% {icon}";
         format-charging = "{capacity}% {icon}󱐋";
         format-full = "{capacity}% {icon}󱐋";
-        format-icons = [ "󱃍" "󰁻" "󰁾" "󰂀" "󰁹"];
+        
+        format-critical = "{capacity}% {icon}";
+        format-icons = ["󰂎" "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"];
         max-length = 25;
       };
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 BATTERY_PATH="/sys/class/power_supply/BAT0"
-THRESHOLD=15
+THRESHOLD=20
 NOTIFY_ID="9999"
 ICON="battery-caution-symbolic"
 

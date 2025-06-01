@@ -9,8 +9,8 @@
 		networkmanager.enable = true;
 		firewall = {
 			enable = true;
-			allowedUDPPorts = [58646 6771];
-			allowedTCPPorts = [58646];
+			allowedUDPPorts = [61870 6771];
+			allowedTCPPorts = [61870];
 			allowPing = false;
 		};	
 	};
