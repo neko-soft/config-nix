@@ -15,10 +15,13 @@ En este repo se encuentra la configuración de mi sistema NixOS personal.
 - [ ] Reordenar archivos de configuración `.nix` para que exista mayor consistencia con los nombres y sus contenidos.
 - [ ] Configurar virtualización para VM con Win11.
 - [ ] Agregar home-manager de forma declarativa en vez de agregar el canal manualmente.
+- [ ] Agregar condición a [volumen.sh](scripts/volumen.sh) para evitar subir el volumen a más del 100%.
+- [ ] Agregar icon trays a [waybar.nix](nixos/dotFiles/waybar.nix).
 
 
 
 # Tareas completas
-- [x] Ajuste de la curva de velociad de ventiladores en el script [ventiladores.sh](scripts/ventiladores.sh) para que sea más agresiva. Se agrega una histéresis de 5°C para evitar cambios constantes si la temperatura oscila entre uno de los puntos de cambio.
-  
+- [x] Ajuste de tiempo de espera antes de cambiar velocidad de ventiladores. Antes era 5 segundos, ahora 15 segundos.
+- [x] Se corrige [instalar.sh](scripts/instalar.sh) para que siempre instale el canal inestable, independiente de que si el usuario elige el canal estable o no.
+
 Para ver todos los cambios, ir a [CHANGELOG.md](CHANGELOG.md)

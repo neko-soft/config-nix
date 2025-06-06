@@ -53,6 +53,7 @@ esac
 echo "Configurando canales..."
 
 sudo nix-channel --add "https://nixos.org/channels/$nix_channel_nixos" nixos
+sudo nix-channel --add "https://nixos.org/channels/nixos-unstable" unstable
 
 if [ "$nix_channel_hm" = "master" ]; then
   sudo nix-channel --add "https://github.com/nix-community/home-manager/archive/master.tar.gz" home-manager
