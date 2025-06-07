@@ -28,4 +28,5 @@ En este repo se encuentra la configuración de mi sistema NixOS personal.
 - [x] Home Manager ahora se instala de forma modular, por lo que no es necesario agregarlo como canal con 'nix-channel --add'.
 - [x] Se elimina la sección que agrega el canal inestable y home manager en el script [instalar.sh](scripts/instalar.sh) ya que ahora ambos se añaden de forma modular. De todas formas se incluye la opción de que 'nixos' siga el canal estable, inestable o mantener el canal actual para los paquetes en [paquetes.nix](nixos/paquetes.nix).
 - [x] Se eliminan varios scripts obsoletos.
+
 Para ver todos los cambios, ir a [CHANGELOG.md](CHANGELOG.md)

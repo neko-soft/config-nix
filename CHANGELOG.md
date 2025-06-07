@@ -1,3 +1,10 @@
+# 2025-06-06
+- [x] Se agrega condición a [volumen.sh](scripts/volumen.sh) para evitar subirlo a más del 100%.
+- [x] Se modulariza el canal inestable usado en [inestables.nix](nixos/inestables.nix), de tal forma que no es necesario añadirlo con 'nix-channel -add'.
+- [x] Home Manager ahora se instala de forma modular, por lo que no es necesario agregarlo como canal con 'nix-channel --add'.
+- [x] Se elimina la sección que agrega el canal inestable y home manager en el script [instalar.sh](scripts/instalar.sh) ya que ahora ambos se añaden de forma modular. De todas formas se incluye la opción de que 'nixos' siga el canal estable, inestable o mantener el canal actual para los paquetes en [paquetes.nix](nixos/paquetes.nix).
+- [x] Se eliminan varios scripts obsoletos.
+
 # 2025-06-05
 - [x] Ajuste de tiempo de espera antes de cambiar velocidad de ventiladores. Antes era 5 segundos, ahora 15 segundos.
 - [x] Se corrige [instalar.sh](scripts/instalar.sh) para que siempre instale el canal inestable, independiente de que si el usuario elige el canal estable o no.
