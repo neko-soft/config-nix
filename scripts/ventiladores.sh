@@ -32,7 +32,7 @@ write_ec() {
 # Esto crea una "zona de tolerancia" para evitar cambios rápidos de velocidad.
 # Por ejemplo, si es 3°C, el ventilador solo bajará de velocidad si la temperatura
 # cae 3°C por debajo del umbral de bajada.
-HYSTERESIS_C=5
+HYSTERESIS_C=3
 
 
 # Variables para la lógica de histéresis:
@@ -63,15 +63,15 @@ while true; do
     if [ "$TEMP_C" -lt 40 ]; then
         target_fan_hex="16"
         target_upper_threshold=40 # El ventilador debería subir a 0B a 40°C
-    elif [ "$TEMP_C" -lt 55 ]; then
+    elif [ "$TEMP_C" -lt 60 ]; then
+        target_fan_hex="1b"
+        target_upper_threshold=60 # El ventilador debería subir a 1B a 55°C
+    elif [ "$TEMP_C" -lt 80 ]; then
         target_fan_hex="20"
-        target_upper_threshold=55 # El ventilador debería subir a 1B a 55°C
-    elif [ "$TEMP_C" -lt 70 ]; then
-        target_fan_hex="26"
-        target_upper_threshold=70 # El ventilador debería subir a 26 a 70°C
-    elif [ "$TEMP_C" -lt 85 ]; then
+        target_upper_threshold=80 # El ventilador debería subir a 26 a 70°C
+    elif [ "$TEMP_C" -lt 90 ]; then
         target_fan_hex="30"
-        target_upper_threshold=85 # El ventilador debería subir a 37 a 85°C
+        target_upper_threshold=90 # El ventilador debería subir a 37 a 85°C
     else # Si la temperatura es 85°C o más
         target_fan_hex="37" # Poner ventiladores al máximo (5500 RPM)
         target_upper_threshold=1000 # Un valor muy alto, indica que ya estamos en el rango superior

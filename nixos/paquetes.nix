@@ -15,11 +15,15 @@
 		#firefox
 		spotify	thunderbird obsidian kitty vscode 
 		xfce.thunar
+		xfce.tumbler
+		xfce.thunar-volman
 		neovim
 		vlc
 		p7zip discord playerctl pywal
 		google-chrome
 		librewolf
+		bibata-cursors
+		exfat
 
 		# Análisis
 		htop killall vnstat iftop
@@ -54,7 +58,7 @@
 		#cmake gnumake libgcc clang openssl boost
 	
 		# Home-Manager
-		home-manager
+		#home-manager
 
 		# Imágenes
 		imagemagick
@@ -74,6 +78,7 @@
 		rocmPackages.rocminfo
 
 		nerd-fonts.jetbrains-mono
+		nerd-fonts.hack
 
  	 ];
 

@@ -53,7 +53,7 @@ programs.waybar = {
           "active"= " ";
           "default"= " ";
 	  "spotify" = " ";
-	  "obsidian" = " ";
+	  "obsidian" = "󱞁 ";
 	  "mail" = " ";
         };
 	#window-rewrite-default = "?";

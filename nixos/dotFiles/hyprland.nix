@@ -39,7 +39,8 @@ wayland.windowManager.hyprland = {
     # Variables de entorno env
     env = [
       "WLR_NO_HARDWARE_CURSORS,1"
-      "XCURSOR_SIZE,24"
+      #"XCURSOR_SIZE,24"
+      #"XCURSOR_THEME,Bibata-Modern-Ice"
       "QT_QPA_PLATFORMTHEME,qt5ct"
       "XDG_CURRENT_DESKTOP,Hyprland"
       "GTK_THEME,Adwaita:dark"
@@ -78,7 +79,7 @@ wayland.windowManager.hyprland = {
       ];
 
       "$terminal" = "kitty";
-      "$fileManager" = "dolphin";
+      "$fileManager" = "thunar";
       "$menu" = "rofi -show drun -show-icons";
       # See https://wiki.hyprland.org/Configuring/Keywords/ for more
       "$mainMod" = "SUPER";

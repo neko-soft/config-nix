@@ -1,5 +1,10 @@
 { config, pkgs, lib, ... }:
 
+let
+  home-manager = builtins.fetchTarball https://github.com/nix-community/home-manager/archive/release-25.05.tar.gz;
+in
+
+
 {
   #programs.home-manager.enable = true;
 
@@ -8,9 +13,11 @@
     home = "/home/nekonix";
   };
 
-  #imports = [
-  #  ./dotFiles/swaylock.nix
-  #];
+  imports =
+    [
+      (import "${home-manager}/nixos")
+    ];
+
 
   home-manager = {
     backupFileExtension = "backup";
@@ -36,7 +43,33 @@
         #./dotFiles/glava/wave.nix
       ];
       home.packages = with pkgs; [ font-awesome noto-fonts noto-fonts-emoji
-      hack-font fira-code fira-code-symbols];
+      nerd-fonts.hack fira-code fira-code-symbols];
+      home.pointerCursor = {
+   		gtk.enable = true;
+    		# x11.enable = true;
+    		package = pkgs.bibata-cursors;
+    		name = "Bibata-Modern-Ice";
+    		size = 24;
+  	};
+
+      gtk = {
+    	enable = true;
+
+    	theme = {
+     		package = pkgs.flat-remix-gtk;
+      		name = "Flat-Remix-GTK-Grey-Darkest";
+    	};
+
+     	iconTheme = {
+     		package = pkgs.adwaita-icon-theme;
+      		name = "Adwaita";
+    	};
+
+     	font = {
+		name = "Noto Sans";
+		size = 10;
+     	};
+     };
       fonts.fontconfig.enable = true;
       home.stateVersion = "25.05"; # Ajusta según la versión de NixOS
 

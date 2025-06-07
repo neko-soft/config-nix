@@ -9,15 +9,16 @@
 	services = {
   		xserver = {
 			enable = true;
+			displayManager.lightdm.enable = false;
 			displayManager.gdm.enable = false;
 			desktopManager.gnome.enable = false;
   			xkb.layout = "latam";
 			xkb.variant = "";
 		};
 		displayManager = {
-			sddm.enable = true;
+			sddm.enable = false;
 		};
-		desktopManager.plasma6.enable = true;
+		desktopManager.plasma6.enable = false;
 		};
 
 	# Esto habilita Hyprland.

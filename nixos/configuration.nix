@@ -16,7 +16,7 @@
 		#./nvidia.nix
 		./inestables.nix
     	#./servicios.nix
-		<home-manager/nixos>
+		#<home-manager/nixos>
 		#./cachix.nix
 		./homeManager.nix
 		#./nas.nix
