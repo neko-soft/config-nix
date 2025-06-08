@@ -1,3 +1,8 @@
+# 2025-06-08
+- [x] Se agrega script para silenciar notificaciones [pausarNotificaciones.sh](scripts/pausarNotificaciones.sh).
+- [x] Se crea el script [bloqueoPantalla.sh](scripts/bloqueoPantalla.sh) que apaga las notificaciones, y muestra el fondo de pantalla antes de bloquear el sistema.
+- [x] Se crea el scripts [menuRofi.sh](scripts/menuRofi.sh) en donde se muestran distintas opciones y acciones que el usuario puede realizar. De momento está la opción de silenciar todas las notificaciones excepto las urgentes, y elegir un fondo de pantalla animado.
+
 # 2025-06-07
 - [x] Se agregan módulos de spotify y tiempo (weather) a [waybar.nix](nixos/dotFiles/waybar.nix).
 - [x] Se utiliza el script [weather.sh](scripts/weather.sh) para obtener el tiempo según wttr.in.
