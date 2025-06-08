@@ -18,12 +18,16 @@
 		xfce.tumbler
 		xfce.thunar-volman
 		neovim
+		wofi
 		vlc
 		p7zip discord playerctl pywal
 		google-chrome
 		librewolf
 		bibata-cursors
 		exfat
+		efibootmgr
+		gnome-calculator
+		kdePackages.kcalc
 
 		# Análisis
 		htop killall vnstat iftop
@@ -83,8 +87,6 @@
  	 ];
 
 	hardware.amdgpu.opencl.enable = true;
-	#Home Manager
-	#programs.home-manager.enable = true;
 	programs.steam.enable = true;
 	programs.obs-studio.enable = true;
 	programs.firefox.enable = true;
@@ -169,14 +171,6 @@
 		'';
 	};
 
-	# Permite algunos paquetes inseguros que son necesarios para algunas cosas
-	#nixpkgs.config.permittedInsecurePackages = [
-		#"electron-25.0.0"
-		#"qbittorrent-4.6.4"
-		#"dotnet-runtime-6.0.36"
-		#"dotnet-sdk-wrapped-6.0.428"
-		#"dotnet-sdk-6.0.428"
-	#];
 
 	# Fuentes para las letras y caracteres
 	fonts.packages = with pkgs ; [

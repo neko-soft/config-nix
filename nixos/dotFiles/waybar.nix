@@ -10,14 +10,23 @@ programs.waybar = {
       layer = "top";
       position = "top";
       margin-bottom = 0;
-      modules-left = [ "clock" "hyprland/workspaces" ];
-      modules-center = [ "hyprland/window"];
+      modules-left = [ "custom/menu" "clock" "custom/weather" "hyprland/workspaces" "hyprland/window" ];
+      modules-center = [ ];
       modules-right = [ "network" "temperature" "memory" "cpu"
-                      "pulseaudio" "cava" "battery"];
+                      "pulseaudio" "cava" "custom/spotify" "battery"];
+
+
+      "custom/menu" = {
+        format = " ";
+        tooltip = false;
+        on-click = "~/config-nix/scripts/menuRofi.sh";
+        interval = 0;
+
+      };
 
       "hyprland/window" = {
         format = "{title}";
-        separate-outputs = true;
+        separate-outputs = false;
 	icon = false;
 	icon-size = 24;
 	rewrite = {
@@ -36,25 +45,56 @@ programs.waybar = {
         tooltip = true;
       };
 
+      "custom/spotify" = {
+	format = {};
+	exec = "~/config-nix/scripts/currentSongSpotify.sh";
+	interval = 2;
+	return-type = "json";
+	on-click = "playerctl -p spotify play-pause";
+      };
+
+      "tray" = {
+	icon-size = 21;
+	spacing = 10;
+      };
+
+      "custom/weather" = {
+	exec = "/home/nekonix/config-nix/scripts/weather.sh";
+	return-type = "json";
+	format = "{}";
+	tooltip = true;
+	interval = 3600;
+      };
+
       "hyprland/workspaces" = {
         format = "{icon}";
         format-icons = {
-          "1" = "1";
-          "2" = "2";
-          "3" = "3";
-          "4" = "4";
-          "5" = "5";
-          "6" = "6";
-          "7" = "7";
-          "8" = "8";
-          "9" = "9";
+          "1" = "01";
+          "2" = "02";
+          "3" = "03";
+          "4" = "04";
+          "5" = "05";
+          "6" = "06";
+          "7" = "07";
+          "8" = "08";
+          "9" = "09";
           "10" = "10";
+          "11" = "11";
+          "12" = "12";
+          "13" = "13";
+          "14" = "14";
+          "15" = "15";
+          "16" = "16";
+          "17" = "17";
+          "18" = "18";
+          "19" = "19";
+          "20" = "20";
           "-99" = "-99";
-          "active"= " ";
-          "default"= " ";
-	  "spotify" = " ";
-	  "obsidian" = "󱞁 ";
-	  "mail" = " ";
+          "active"= "";
+          "default"= "";
+	  "spotify" = "";
+	  "obsidian" = "󱞁";
+	  "mail" = "";
         };
 	#window-rewrite-default = "?";
 	#window-rewrite = {
@@ -64,6 +104,7 @@ programs.waybar = {
 	#	"class<spotify>" = " ";
 	#};
 	show-special = true;
+	all-outputs = true;
       };
       network = {
           #interface = "enp9s0f4u2";
@@ -101,6 +142,7 @@ programs.waybar = {
         format-critical = "{temperatureC}°C   ";
         format = "{temperatureC}°C {icon}";
         format-icons = ["" "" "" ""];
+	interval = 1;
       };
 
 
@@ -115,11 +157,6 @@ programs.waybar = {
         tooltip = true;
       };
 
-      "custom/powermenu" = {
-        format = "";
-        tooltip = false;
-        on-click = "exec wlogout -p layer-shell";
-      };
 
       pulseaudio = {
         format = "{volume}% {icon}";
@@ -198,6 +235,7 @@ programs.waybar = {
 
           #workspaces button {
             color: #c3aeff;
+	    margin: 0 2px;
           }
           /* Fix: active workspace doesn't show up */
           /* #workspaces button.focused { */
@@ -205,7 +243,7 @@ programs.waybar = {
             color: #c3aeff;
           }
 
-          #custom-powermenu,
+          #custom-menu,
           #cpu,
           #temperature,
           #memory,
@@ -215,6 +253,9 @@ programs.waybar = {
           #battery,
           #pulseaudio,
           #cava,
+	  #custom-spotify,
+	  #custom-weather,
+	  #tray,
           #network {
             padding: 4px 8px;
             background-color: rgba(0,0,0,0.8);
@@ -223,41 +264,23 @@ programs.waybar = {
             margin: 6px 2px;
           }
 
-	  #cpu,
-	  #memory,
-	  #temperature,
-	  #network,
-	  #battery,
-	  #pulseaudio,
-	  #cava {
-  	  min-width: 0px;  /* o lo que se vea bien */
-	  }
 	  #battery {
-	  min-width: 50px;
+	  min-width: 60px;
+	  color: #859900
 	  }
-
 
           #window {
-            color: #b4bcca;
+            color: #cacaca;
           }
+	  #custom-weather {
+		color: #fcd0f3
+	  }
 
-          #battery {
-          color: #859900;
-          }
 
           #tray {
             margin-left: 4px;
           }
 
-          #custom-updates {
-            color: #1788e4;
-          }
-
-          #custom-powermenu {
-            color: #e06c75;
-            padding-right: 11px;
-            margin-right: 8px;
-          }
 
           #scratchpad {
             color: #cffafe;
@@ -266,7 +289,7 @@ programs.waybar = {
           }
 
 
-
+	  #custom-spotify,
           #pulseaudio,
           #cava {
             color: #0fb9b1; 

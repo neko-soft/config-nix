@@ -118,7 +118,7 @@ while true; do
         echo "🌡 Temp: $TEMP_C°C → Fans: 0x$last_applied_fan_hex (NO CAMBIADO, histéresis activa)"
     fi
 
-    # Esperar 15 segundos antes de la próxima comprobación
-    sleep 15
+    # Esperar 30 segundos antes de la próxima comprobación
+    sleep 30
 
 done

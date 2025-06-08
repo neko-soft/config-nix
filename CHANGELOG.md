@@ -1,3 +1,8 @@
+# 2025-06-07
+- [x] Se agregan módulos de spotify y tiempo (weather) a [waybar.nix](nixos/dotFiles/waybar.nix).
+- [x] Se utiliza el script [weather.sh](scripts/weather.sh) para obtener el tiempo según wttr.in.
+- [x] Se utiliza el script [currentSongSpotify.sh](scripts/currentSongSpotify.sh) para obtener el nombre de la canción actual sonando en Spotify.
+
 # 2025-06-06
 - [x] Se agrega condición a [volumen.sh](scripts/volumen.sh) para evitar subirlo a más del 100%.
 - [x] Se modulariza el canal inestable usado en [inestables.nix](nixos/inestables.nix), de tal forma que no es necesario añadirlo con 'nix-channel -add'.

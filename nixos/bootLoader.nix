@@ -6,7 +6,7 @@
 
 # Bootloader. Está activado el Grub
 boot.loader = {
-	#systemd-boot.enable = true;
+	systemd-boot.enable = false;
 	efi.canTouchEfiVariables = true;
 	grub = {
 		enable = true;
@@ -15,9 +15,7 @@ boot.loader = {
 		useOSProber = true;
 		default = 0;
 		splashImage = /home/nekonix/wallpapers/Kath.png;
-		extraConfig = ''
-			GRUB_DISABLE_SUBMENU=y
-		'';
+		efiInstallAsRemovable = false;
 	};
 };
 }

@@ -20,6 +20,10 @@ services.dunst = {
 			separator_color = "frame";
 			background = "#1b1f32e6";
 			foreground = "#5cbcd6";
+			fullscreen = "delay";
+		};
+		urgency_critical = {
+			override_pause_level = 100;
 		};
 	};
 };

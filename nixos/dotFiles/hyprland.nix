@@ -56,7 +56,7 @@ wayland.windowManager.hyprland = {
 
     # Execute your favorite apps at launch
     exec-once = [
-        "waybar & dunst"
+        "waybar & dunst & spotify & obsidian & thunderbird & qbittorrent"
         "systemctl --user enable opentabletdriver.service --now"
         "/home/nekonix/config-nix/scripts/refresco.sh"
         "systemctl --user start hyprpolkitagent"
@@ -72,10 +72,10 @@ wayland.windowManager.hyprland = {
         "special:spotify, on-created-empty: spotify"
         "special:obsidian, on-created-empty: obsidian"
         "special:mail, on-created-empty: thunderbird"
-        "special:discord, on-created-empty: discord"
+        #"special:discord, on-created-empty: discord"
         "1, monitor:HDMI-A-1, default:true, on-created-empty: firefox"
-	"9, monitor:eDP-1, default:true, on-created-empty: qbittorrent"
-        "10, monitor:eDP-1, on-created-empty: /home/nekonix/config-nix/scripts/adornosTerminal.sh"
+	"12, monitor:eDP-1, default:false, on-created-empty: qbittorrent"
+        "11, monitor:eDP-1, default:true, on-created-empty: /home/nekonix/config-nix/scripts/adornosTerminal.sh"
       ];
 
       "$terminal" = "kitty";
@@ -176,7 +176,13 @@ wayland.windowManager.hyprland = {
       # Example windowrule v2
       # windowrulev2 = float,class:^(kitty)$,title:^(kitty)$
       # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
-      windowrulev2 = ["nomaximizerequest, class:.*"];
+      #windowrulev2 = ["nomaximizerequest, class:.*"];
+      windowrulev2 = [
+      		"workspace special:spotify silent, class:^(Spotify)$"
+		"workspace special:obsidian silent, class:^(obsidian)$"
+		"workspace special:mail silent, class:^(thunderbird)$"
+		"workspace 12 silent, class:^(org.qbittorrent.qBittorrent)$"
+	];
 
 
       # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
@@ -188,15 +194,21 @@ wayland.windowManager.hyprland = {
         "$mainMod, R, exec, $menu"
         "$mainMod, P, exec, ~/config-nix/scripts/mostrarFondo.sh"
         "$mainMod, S, togglesplit"
-        "$mainMod, L, exec, swaylock"
+        "$mainMod SHIFT, L, exec, swaylock"
+        "$mainMod, O, exec, ~/config-nix/scripts/menuRofi.sh"
+	
         "$mainMod, F, fullscreen"
 	"$mainMod, period, exec, ~/config-nix/scripts/emojis.sh"
 
         # Cambiar la ventana con focus
         "$mainMod, left, movefocus, l"
+        "$mainMod, J, movefocus, l"
         "$mainMod, right, movefocus, r"
+        "$mainMod, L, movefocus, r"
         "$mainMod, up, movefocus, u"
+        "$mainMod, I, movefocus, u"
         "$mainMod, down, movefocus, d"
+        "$mainMod, K, movefocus, d"
 
         # Ir al workspace selecionado
         "$mainMod, 1, workspace, 1"
@@ -210,6 +222,17 @@ wayland.windowManager.hyprland = {
         "$mainMod, 9, workspace, 9"
         "$mainMod, 0, workspace, 10"
 
+        "$mainMod, F1, workspace, 11"
+        "$mainMod, F2, workspace, 12"
+        "$mainMod, F3, workspace, 13"
+        "$mainMod, F4, workspace, 14"
+        "$mainMod, F5, workspace, 15"
+        "$mainMod, F6, workspace, 16"
+        "$mainMod, F7, workspace, 17"
+        "$mainMod, F8, workspace, 18"
+        "$mainMod, F9, workspace, 19"
+        "$mainMod, F10, workspace, 20"
+
         # Mover la ventana con focus al workspace seleccionado
         "$mainMod SHIFT, 1, movetoworkspace, 1"
         "$mainMod SHIFT, 2, movetoworkspace, 2"
@@ -221,6 +244,17 @@ wayland.windowManager.hyprland = {
         "$mainMod SHIFT, 8, movetoworkspace, 8"
         "$mainMod SHIFT, 9, movetoworkspace, 9"
         "$mainMod SHIFT, 0, movetoworkspace, 10"
+
+        "$mainMod SHIFT, F1, movetoworkspace, 11"
+        "$mainMod SHIFT, F2, movetoworkspace, 12"
+        "$mainMod SHIFT, F3, movetoworkspace, 13"
+        "$mainMod SHIFT, F4, movetoworkspace, 14"
+        "$mainMod SHIFT, F5, movetoworkspace, 15"
+        "$mainMod SHIFT, F6, movetoworkspace, 16"
+        "$mainMod SHIFT, F7, movetoworkspace, 17"
+        "$mainMod SHIFT, F8, movetoworkspace, 18"
+        "$mainMod SHIFT, F9, movetoworkspace, 19"
+        "$mainMod SHIFT, F10, movetoworkspace, 20"
 
         # Workspaces especiales
         "$mainMod, Z, togglespecialworkspace, spotify"
