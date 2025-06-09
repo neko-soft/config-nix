@@ -5,8 +5,8 @@
 services.hyprpaper = {
 	enable = true;
 	settings = {
-		preload = ["/home/nekonix/wallpapers/Kath.png"];
-		wallpaper = [",/home/nekonix/wallpapers/Kath.png"];
+		preload = ["/home/nekonix/wallpapers/1839888782432317856-0.jpg"];
+		wallpaper = [",/home/nekonix/wallpapers/1839888782432317856-0.jpg"];
 	};
 };
 
@@ -194,7 +194,7 @@ wayland.windowManager.hyprland = {
         "$mainMod, R, exec, $menu"
         "$mainMod, P, exec, ~/config-nix/scripts/mostrarFondo.sh"
         "$mainMod, S, togglesplit"
-        "$mainMod SHIFT, L, exec, swaylock"
+        "$mainMod, L, exec, ~/config-nix/scripts/bloqueoPantalla.sh"
         "$mainMod, O, exec, ~/config-nix/scripts/menuRofi.sh"
 	
         "$mainMod, F, fullscreen"
@@ -202,13 +202,13 @@ wayland.windowManager.hyprland = {
 
         # Cambiar la ventana con focus
         "$mainMod, left, movefocus, l"
-        "$mainMod, J, movefocus, l"
+        #"$mainMod, J, movefocus, l"
         "$mainMod, right, movefocus, r"
-        "$mainMod, L, movefocus, r"
+        #"$mainMod, L, movefocus, r"
         "$mainMod, up, movefocus, u"
-        "$mainMod, I, movefocus, u"
+        #"$mainMod, I, movefocus, u"
         "$mainMod, down, movefocus, d"
-        "$mainMod, K, movefocus, d"
+        #"$mainMod, K, movefocus, d"
 
         # Ir al workspace selecionado
         "$mainMod, 1, workspace, 1"
@@ -271,6 +271,8 @@ wayland.windowManager.hyprland = {
         "$mainMod, mouse_down, workspace, e-1"
         "$mainMod, mouse_up, workspace, e+1"
         "$mainMod, A, workspace, e-1"
+	",mouse:275, workspace, e+1"
+	",mouse:276, workspace, e-1"
         "$mainMod, D, workspace, e+1"
         
         # Control de media

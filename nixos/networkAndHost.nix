@@ -9,8 +9,10 @@
 		networkmanager.enable = true;
 		firewall = {
 			enable = true;
-			allowedUDPPorts = [61870 6771];
-			allowedTCPPorts = [61870];
+			allowedUDPPorts = [55452 6771];
+			allowedTCPPorts = [55452];
+			#allowedUDPPortRanges = [{from = 50000; to = 60000;}];
+			#allowedTCPPortRanges = [{from = 50000; to = 60000;}];
 			allowPing = false;
 		};	
 	};
@@ -33,8 +35,8 @@
  
 	# Aumentar límite de archivos abiertos
  		security.pam.loginLimits = [
-   			{ domain = "*"; type = "hard"; item = "nofile"; value = "1048576"; }
-   			{ domain = "*"; type = "soft"; item = "nofile"; value = "1048576"; }
+   			{ domain = "*"; type = "hard"; item = "nofile"; value = "4096"; }
+   			{ domain = "*"; type = "soft"; item = "nofile"; value = "4096"; }
  		];
 
 

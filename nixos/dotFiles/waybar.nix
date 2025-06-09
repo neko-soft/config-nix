@@ -10,23 +10,16 @@ programs.waybar = {
       layer = "top";
       position = "top";
       margin-bottom = 0;
-      modules-left = [ "custom/menu" "clock" "custom/weather" "hyprland/workspaces" "hyprland/window" ];
+      modules-left = [ "clock" "custom/weather" "hyprland/workspaces" "hyprland/window" ];
       modules-center = [ ];
       modules-right = [ "network" "temperature" "memory" "cpu"
                       "pulseaudio" "cava" "custom/spotify" "battery"];
 
 
-      "custom/menu" = {
-        format = " ";
-        tooltip = false;
-        on-click = "~/config-nix/scripts/menuRofi.sh";
-        interval = 0;
-
-      };
 
       "hyprland/window" = {
         format = "{title}";
-        separate-outputs = false;
+        separate-outputs = true;
 	icon = false;
 	icon-size = 24;
 	rewrite = {
@@ -53,10 +46,6 @@ programs.waybar = {
 	on-click = "playerctl -p spotify play-pause";
       };
 
-      "tray" = {
-	icon-size = 21;
-	spacing = 10;
-      };
 
       "custom/weather" = {
 	exec = "/home/nekonix/config-nix/scripts/weather.sh";
@@ -70,7 +59,7 @@ programs.waybar = {
         format = "{icon}";
         format-icons = {
           "1" = "01";
-          "2" = "02";
+	  "2" = "02";
           "3" = "03";
           "4" = "04";
           "5" = "05";
@@ -104,13 +93,18 @@ programs.waybar = {
 	#	"class<spotify>" = " ";
 	#};
 	show-special = true;
-	all-outputs = true;
+	all-outputs = false;
       };
       network = {
           #interface = "enp9s0f4u2";
           #tooltip-format-ethernet = "{ifname} ";
           interval = 1;
           format = "{bandwidthDownBytes}  {bandwidthUpBytes} ";
+          format-ethernet = "Ethernet  ";
+          format-wifi = "WiFi {icon}{signalStrenght}%";
+	  format-icons = ["󰤯" "󰤟" "󰤢" "󰤥" "󰤨"];
+	  format-disconnected = "Desconectado 󰤮";
+          format-alt = "{bandwidthDownBytes}  {bandwidthUpBytes} ";
       };
 
       battery = {

@@ -14,6 +14,7 @@ En este repo se encuentra la configuración de mi sistema NixOS personal.
 - [ ] Reordenar archivos de configuración `.nix` para que exista mayor consistencia con los nombres y sus contenidos.
 - [ ] Configurar virtualización para VM con Win11.
 - [ ] Agregar sonidos a las notificaciones, especialmente a las que son urgentes.
+- [ ] Crear un script detecte inactividad.
 
 
 # Tareas completas

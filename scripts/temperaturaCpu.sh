@@ -17,13 +17,13 @@ while true; do
     fi
 
     if (( temp >= 90 )); then
-        dunstify -u critical -r "$NOTIFY_ID" -i "dialog-warning" \
+        dunstify -u normal -r "$NOTIFY_ID" -i "dialog-warning" \
             "🔥 CPU HIRVIENDO: $temp °C 🔥" \
             "🥵 El procesador está muy caliente 🥵"
-    elif (( temp >= 80 )); then
-        dunstify -u normal -r "$NOTIFY_ID" -i "dialog-warning" \
-            "󰀦 Temperatura alta: $temp °C " \
-            "El procesador se está calentando."
+    #elif (( temp >= 80 )); then
+    #    dunstify -u normal -r "$NOTIFY_ID" -i "dialog-warning" \
+    #        "󰀦 Temperatura alta: $temp °C " \
+    #        "El procesador se está calentando."
     else
         # Cerrar notificación si ya no aplica
         dunstify -C "$NOTIFY_ID"

@@ -18,6 +18,8 @@
 		xfce.tumbler
 		xfce.thunar-volman
 		neovim
+		iotop
+		lsof
 		wofi
 		vlc
 		p7zip discord playerctl pywal
@@ -27,7 +29,6 @@
 		exfat
 		efibootmgr
 		gnome-calculator
-		kdePackages.kcalc
 
 		# Análisis
 		htop killall vnstat iftop
