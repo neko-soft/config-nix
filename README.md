@@ -18,8 +18,7 @@ En este repo se encuentra la configuración de mi sistema NixOS personal.
 
 
 # Tareas completas
-- [x] Se agrega script para silenciar notificaciones [pausarNotificaciones.sh](scripts/pausarNotificaciones.sh).
-- [x] Se crea el script [bloqueoPantalla.sh](scripts/bloqueoPantalla.sh) que apaga las notificaciones, y muestra el fondo de pantalla antes de bloquear el sistema.
-- [x] Se crea el scripts [menuRofi.sh](scripts/menuRofi.sh) en donde se muestran distintas opciones y acciones que el usuario puede realizar. De momento está la opción de silenciar todas las notificaciones excepto las urgentes, y elegir un fondo de pantalla animado.
-
+- [x] Se agrega al [menuRofi.sh](scripts/menuRofi.sh) una opción para recargar hyprland, hyprpaper, waybar y dunst.
+- [x] Se elimina la notificación de temperatura entre 80°C y 90°C, en [temperaturaCpu.sh](scripts/temperaturaCpu.sh), dejando sólo la notificación de alerta sobre los 90°C.
+ 
 Para ver todos los cambios, ir a [CHANGELOG.md](CHANGELOG.md)
