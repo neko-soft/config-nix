@@ -18,9 +18,9 @@ in
     #opentabletdriver
     #bottles
     nomacs
-    kdePackages.kdenlive
-    ladspaPlugins
-    audacity
+    #kdePackages.kdenlive
+    #ladspaPlugins
+    #audacity
     #lutris
     #davinci-resolve
   ];

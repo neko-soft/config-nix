@@ -58,6 +58,8 @@
 
 		# Máquinas Virtuales
 		#virt-viewer spice spice-gtk spice-protocol win-virtio win-spice swtpm
+		virtiofsd
+		virtio-win
 		
 		# Develop y Compilar
 		#cmake gnumake libgcc clang openssl boost

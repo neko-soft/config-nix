@@ -93,7 +93,7 @@ programs.waybar = {
 	#	"class<spotify>" = " ";
 	#};
 	show-special = true;
-	all-outputs = false;
+	all-outputs = true;
       };
       network = {
           #interface = "enp9s0f4u2";
@@ -103,7 +103,7 @@ programs.waybar = {
           format-ethernet = "Ethernet  ";
           format-wifi = "WiFi {icon}{signalStrenght}%";
 	  format-icons = ["󰤯" "󰤟" "󰤢" "󰤥" "󰤨"];
-	  format-disconnected = "Desconectado 󰤮";
+	  format-disconnected = "Desconectado 󰤮 ";
           format-alt = "{bandwidthDownBytes}  {bandwidthUpBytes} ";
       };
 

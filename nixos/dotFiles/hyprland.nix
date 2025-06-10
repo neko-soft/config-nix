@@ -58,7 +58,7 @@ wayland.windowManager.hyprland = {
     exec-once = [
         "waybar & dunst & spotify & obsidian & thunderbird & qbittorrent"
         "systemctl --user enable opentabletdriver.service --now"
-        "/home/nekonix/config-nix/scripts/refresco.sh"
+        #"/home/nekonix/config-nix/scripts/refresco.sh"
         "systemctl --user start hyprpolkitagent"
 
 	"/home/nekonix/config-nix/scripts/alertaBateria.sh"
