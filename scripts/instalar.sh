@@ -132,9 +132,6 @@ sed -i "s|.*boot.initrd.luks.devices.*|$luks_line|" "$REPO_ROOT/nixos/configurat
 sed -i "s|^\(.*stateVersion\s*=.*\)|  $versionLine|" "$REPO_ROOT/nixos/configuration.nix"
 
 
-# Reconstruir sistema
-sudo nixos-rebuild switch
-
 
 
 
@@ -148,7 +145,7 @@ sudo nixos-rebuild switch
 
 
 
-# Copiar archivos del repo al sistema y primer rebuild
+# Copiar archivos del repo al sistema y reconstruir
 
 sudo cp  -r $REPO_ROOT/nixos/ /etc/
 sudo nixos-rebuild switch
