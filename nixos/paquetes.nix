@@ -20,10 +20,10 @@
 		neovim
 		iotop
 		lsof
-		wofi
+		#wofi
 		vlc
 		p7zip discord playerctl pywal
-		google-chrome
+		#google-chrome
 		librewolf
 		bibata-cursors
 		exfat
@@ -117,7 +117,7 @@
 			CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
 			CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
 
-			CPU_MIN_PERF_ON_AC = 60;
+			CPU_MIN_PERF_ON_AC = 0;
 			CPU_MAX_PERF_ON_AC = 100;
 			CPU_MIN_PERF_ON_BAT = 0;
 			CPU_MAX_PERF_ON_BAT = 50;
