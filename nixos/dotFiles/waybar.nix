@@ -96,7 +96,7 @@ programs.waybar = {
 	all-outputs = true;
       };
       network = {
-          interface = "eno1";
+          #interface = "eno1";
           #tooltip-format-ethernet = "{ifname} ";
           interval = 1;
           format = "{bandwidthDownBytes}  {bandwidthUpBytes} ";

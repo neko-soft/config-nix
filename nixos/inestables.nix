@@ -12,11 +12,12 @@ in
 {
   environment.systemPackages = with unstable.pkgs; [
     qbittorrent
+    wineWowPackages.unstableFull
     #wineWowPackages.stagingFull
     #winetricks
     krita
     #opentabletdriver
-    #bottles
+    bottles
     nomacs
     #kdePackages.kdenlive
     #ladspaPlugins
