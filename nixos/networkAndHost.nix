@@ -35,8 +35,8 @@
  
 	# Aumentar límite de archivos abiertos
  		security.pam.loginLimits = [
-   			{ domain = "*"; type = "hard"; item = "nofile"; value = "4096"; }
-   			{ domain = "*"; type = "soft"; item = "nofile"; value = "4096"; }
+   			{ domain = "*"; type = "hard"; item = "nofile"; value = "32768"; }
+   			{ domain = "*"; type = "soft"; item = "nofile"; value = "32768"; }
  		];
 
 
