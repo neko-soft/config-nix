@@ -82,7 +82,7 @@ echo "Canal '$nix_channel_nixos' agregado como 'nixos'."
 # VERIFICA SI EL HOME MANAGER EXISTE SIQUIERA.....
 
 
-sudo sed -i "s#https://github.com/nix-community/home-manager/archive/.*\.tar\.gz#https://github.com/nix-community/home-manager/archive/${nix_channel_hm}.tar.gz#" /etc/nixos/homeManager.nix
+sudo sed -i "s#https://github.com/nix-community/home-manager/archive/.*\.tar\.gz#https://github.com/nix-community/home-manager/archive/${nix_channel_hm}.tar.gz#" "$REPO_ROOT/nixos/homeManager.nix"
 echo "Home Manager versión '$nix_channel_hm' agregado declarativamente en '/etc/nixos/homeManager.nix'."
 
 #if [ "$nix_channel_hm" = "master" ]; then

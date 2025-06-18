@@ -15,10 +15,15 @@ En este repo se encuentra la configuración de mi sistema NixOS personal.
 - [ ] Configurar virtualización para VM con Win11.
 - [ ] Agregar sonidos a las notificaciones, especialmente a las que son urgentes.
 - [ ] Crear un script detecte inactividad.
-
+- [ ] Añadir y configurar los siguientes paquetes de forma declarativa en [homeManager.nix](nixos/homeManager.nix):
+    - [ ] Thunderbird
+    - [ ] Obsidian
+    - [ ] spotify-player
+    - [ ] VS Code
+    - [ ] Neovim
 
 # Tareas completas
-- [x] Se agrega al [menuRofi.sh](scripts/menuRofi.sh) una opción para recargar hyprland, hyprpaper, waybar y dunst.
-- [x] Se elimina la notificación de temperatura entre 80°C y 90°C, en [temperaturaCpu.sh](scripts/temperaturaCpu.sh), dejando sólo la notificación de alerta sobre los 90°C.
+- [x] Se actualiza script [instalar.sh](scripts/instalar.sh) para que el canal de home manager se edite en el archivo [homeManager.nix](nixos/homeManager.nix) del repositorio descargado y no del archivo local.
+- [x] Se actualiza script [refresco.sh](scripts/refresco.sh) para que incluya [adornosTerminal.sh](scripts/adornosTerminal.sh).
  
 Para ver todos los cambios, ir a [CHANGELOG.md](CHANGELOG.md)

@@ -52,7 +52,7 @@ programs.waybar = {
 	return-type = "json";
 	format = "{}";
 	tooltip = true;
-	interval = 3600;
+	interval = 1200;
       };
 
       "hyprland/workspaces" = {

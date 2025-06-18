@@ -114,7 +114,7 @@ home.file = {
         ".config/kitty/kitty.conf".text = ''
           # vim:fileencoding=utf-8:foldmethod=marker
 
-          include ./theme.conf
+          #include ./theme.conf
 
           #: Fonts {{{
 

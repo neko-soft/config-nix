@@ -1,3 +1,7 @@
+# 2025-06-17
+- [x] Se actualiza script [instalar.sh](scripts/instalar.sh) para que el canal de home manager se edite en el archivo [homeManager.nix](nixos/homeManager.nix) del repositorio descargado y no del archivo local.
+- [x] Se actualiza script [refresco.sh](scripts/refresco.sh) para que incluya [adornosTerminal.sh](scripts/adornosTerminal.sh).
+
 # 2025-06-09
 - [x] Se agrega al [menuRofi.sh](scripts/menuRofi.sh) una opción para recargar hyprland, hyprpaper, waybar y dunst.
 - [x] Se elimina la notificación de temperatura entre 80°C y 90°C, en [temperaturaCpu.sh](scripts/temperaturaCpu.sh), dejando sólo la notificación de alerta sobre los 90°C.
