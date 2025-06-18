@@ -14,7 +14,8 @@ boot.loader = {
 		efiSupport = true;
 		useOSProber = true;
 		default = 0;
-		splashImage = /home/nekonix/wallpapers/Kath.png;
+		theme = "${pkgs.catppuccin-grub}";
+		#splashImage = /home/nekonix/wallpapers/Kath.png;
 		efiInstallAsRemovable = false;
 	};
 };

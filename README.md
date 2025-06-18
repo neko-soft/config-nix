@@ -21,9 +21,11 @@ En este repo se encuentra la configuración de mi sistema NixOS personal.
     - [ ] spotify-player
     - [ ] VS Code
     - [ ] Neovim
+- [ ] Configurar bien los overrides de `catppuccin-sddm` y `catpuccin-grub`.
+- [ ] Automatizar cambios del [CHANGELOG.md](CHANGELOG.md) de tal forma que copie automáticamente las Tareas Completas de [README.md](README.md).
 
 # Tareas completas
-- [x] Se actualiza script [instalar.sh](scripts/instalar.sh) para que el canal de home manager se edite en el archivo [homeManager.nix](nixos/homeManager.nix) del repositorio descargado y no del archivo local.
-- [x] Se actualiza script [refresco.sh](scripts/refresco.sh) para que incluya [adornosTerminal.sh](scripts/adornosTerminal.sh).
+- [x] Se agregan temas de `catppuccin` a `sddm` y `grub`.
+- [x] Se cambia configuración del firewall en [networkAndHost.nix](nixos/networkAndHost.nix).
  
 Para ver todos los cambios, ir a [CHANGELOG.md](CHANGELOG.md)

@@ -9,13 +9,29 @@
 		networkmanager.enable = true;
 		firewall = {
 			enable = true;
-			allowedUDPPorts = [55452 6771];
+			allowedUDPPorts = [55452 6771 1900 5351];
 			allowedTCPPorts = [55452];
 			#allowedUDPPortRanges = [{from = 50000; to = 60000;}];
 			#allowedTCPPortRanges = [{from = 50000; to = 60000;}];
 			allowPing = false;
+			logRefusedPackets = true;
+			logRefusedConnections = true;
+
 		};	
 	};
+
+	services.miniupnpd = {
+		enable = false;
+		upnp = true;
+		natpmp = true;
+		internalIPs = ["eno1"];
+		externalInterface = "eno1";
+  		appendConfig = ''
+    			secure_mode=yes
+    			system_uptime=yes
+  		'';
+	};
+
 	#networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 	services.openssh.enable = false;
 

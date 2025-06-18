@@ -1,3 +1,7 @@
+# 2025-06-18
+- [x] Se agregan temas de `catppuccin` a `sddm` y `grub`.
+- [x] Se cambia configuración del firewall en [networkAndHost.nix](nixos/networkAndHost.nix).
+
 # 2025-06-17
 - [x] Se actualiza script [instalar.sh](scripts/instalar.sh) para que el canal de home manager se edite en el archivo [homeManager.nix](nixos/homeManager.nix) del repositorio descargado y no del archivo local.
 - [x] Se actualiza script [refresco.sh](scripts/refresco.sh) para que incluya [adornosTerminal.sh](scripts/adornosTerminal.sh).

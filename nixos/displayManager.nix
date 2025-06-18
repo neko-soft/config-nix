@@ -4,7 +4,18 @@
 { lib, config, pkgs, ... }:
 
 
-{ 
+{
+
+	environment.systemPackages = [(
+  		pkgs.catppuccin-sddm.override {
+    		flavor = "mocha";
+    		font  = "Noto Sans";
+    		fontSize = "9";
+    		background = "${/home/nekonix/wallpapers/Kath.png}";
+    		loginBackground = true;
+  		}
+	)];
+
 	# Esto habilita GNOME y KDE Plasma.
 	services = {
   		xserver = {
@@ -17,6 +28,8 @@
 		};
 		displayManager = {
 			sddm.enable = true;
+			sddm.theme = "catppuccin-mocha";
+			#sddm.package = pkgs.kdePackages.sddm;
 		};
 		desktopManager.plasma6.enable = true;
 		};

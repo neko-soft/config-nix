@@ -183,7 +183,7 @@ wayland.windowManager.hyprland = {
 		"workspace special:mail silent, class:^(thunderbird)$"
 		#"workspace 11 silent, class:^(kitty)$, title:^(cmatrix)$"
 		#"workspace 11 silent, title:^(asciiquarium)$"
-		#"workspace 12 silent, class:^(org.qbittorrent.qBittorrent)$"
+		"workspace 12 silent, class:^(org.qbittorrent.qBittorrent)$"
 	];
 
 

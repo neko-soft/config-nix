@@ -23,13 +23,22 @@
 		#wofi
 		vlc
 		p7zip discord playerctl pywal
-		#google-chrome
+		google-chrome
 		librewolf
 		bibata-cursors
 		exfat
 		efibootmgr
 		gnome-calculator
-
+		spotify-player
+		catppuccin-grub
+		#catppuccin-sddm
+  		#catppuccin-sddm.override {
+    		#	flavor = "mocha";
+    		#	font  = "Noto Sans";
+    		#	fontSize = "9";
+    		#	background = "${./wallpaper.png}";
+    		#	loginBackground = true;
+  		#}
 		# Análisis
 		htop killall vnstat iftop
 
