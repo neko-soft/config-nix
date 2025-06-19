@@ -30,6 +30,7 @@
 		efibootmgr
 		gnome-calculator
 		spotify-player
+		#bluez
 		catppuccin-grub
 		#catppuccin-sddm
   		#catppuccin-sddm.override {
@@ -98,6 +99,8 @@
 
  	 ];
 
+	#hardware.bluetooth.enable = true;
+	#services.blueman.enable = true;
 	hardware.amdgpu.opencl.enable = true;
 	programs.steam.enable = true;
 	programs.obs-studio.enable = true;
