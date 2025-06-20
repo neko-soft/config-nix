@@ -1,3 +1,6 @@
+# 2025-06-19
+- [x] Se corrije error donde [pausarNotificaciones.sh](scripts/pausarNotificaciones.sh) no cerraba nunca la notificación que se mostraba al reactivar las notificaciones.
+
 # 2025-06-18
 - [x] Se agregan temas de `catppuccin` a `sddm` y `grub`.
 - [x] Se cambia configuración del firewall en [networkAndHost.nix](nixos/networkAndHost.nix).

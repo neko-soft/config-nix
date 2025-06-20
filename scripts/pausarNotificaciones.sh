@@ -7,6 +7,8 @@ if [[ -f "$STATUS_FILE" ]]; then
   dunstctl set-paused false
   rm "$STATUS_FILE"
   dunstify -u critical -r $NOTIFY_ID "🔔 Notificaciones activadas"
+  sleep 10
+  dunstctl close "$NOTIFY_ID"
 
 else
   # Mutear

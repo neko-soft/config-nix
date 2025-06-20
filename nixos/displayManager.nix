@@ -27,11 +27,11 @@
 			xkb.variant = "";
 		};
 		displayManager = {
-			sddm.enable = true;
+			sddm.enable = false;
 			sddm.theme = "catppuccin-mocha";
 			#sddm.package = pkgs.kdePackages.sddm;
 		};
-		desktopManager.plasma6.enable = true;
+		desktopManager.plasma6.enable = false;
 		};
 
 	# Esto habilita Hyprland.

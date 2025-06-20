@@ -25,7 +25,6 @@ En este repo se encuentra la configuración de mi sistema NixOS personal.
 - [ ] Automatizar cambios del [CHANGELOG.md](CHANGELOG.md) de tal forma que copie automáticamente las Tareas Completas de [README.md](README.md).
 
 # Tareas completas
-- [x] Se agregan temas de `catppuccin` a `sddm` y `grub`.
-- [x] Se cambia configuración del firewall en [networkAndHost.nix](nixos/networkAndHost.nix).
+- [x] Se corrije error donde [pausarNotificaciones.sh](scripts/pausarNotificaciones.sh) no cerraba nunca la notificación que se mostraba al reactivar las notificaciones.
  
 Para ver todos los cambios, ir a [CHANGELOG.md](CHANGELOG.md)
