@@ -31,6 +31,12 @@
 		gnome-calculator
 		spotify-player
 		#bluez
+		parabolic
+		mission-center
+		cameractrls
+		easyeffects
+		pavucontrol
+		wl-clipboard
 		catppuccin-grub
 		#catppuccin-sddm
   		#catppuccin-sddm.override {

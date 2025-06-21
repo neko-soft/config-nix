@@ -24,5 +24,6 @@ in
     #audacity
     #lutris
     #davinci-resolve
+    #davinci-resolve-studio
   ];
 }

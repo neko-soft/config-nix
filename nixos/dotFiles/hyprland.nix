@@ -183,7 +183,7 @@ wayland.windowManager.hyprland = {
 		"workspace special:mail silent, class:^(thunderbird)$"
 		#"workspace 11 silent, class:^(kitty)$, title:^(cmatrix)$"
 		#"workspace 11 silent, title:^(asciiquarium)$"
-		#"workspace 12 silent, class:^(org.qbittorrent.qBittorrent)$"
+		"workspace 12 silent, class:^(org.qbittorrent.qBittorrent)$"
 	];
 
 
@@ -284,7 +284,8 @@ wayland.windowManager.hyprland = {
         ", XF86AudioStop, exec, playerctl stop"
 
         # Pantallazos
-        ", Print, exec, grim -g \"$(slurp -d)\""
+	", Print, exec, grim -g \"$(slurp -d)\" - | tee \"$HOME/Pictures/$(date +%Y%m%d_%H%M%S)_grim.png\" | wl-copy"
+        #", Print, exec, grim -g \"$(slurp -d)\" - | wl-copy"
       ];
 
       # Los bindm son cuando se usan los botones del mouse

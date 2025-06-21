@@ -25,6 +25,6 @@ En este repo se encuentra la configuración de mi sistema NixOS personal.
 - [ ] Automatizar cambios del [CHANGELOG.md](CHANGELOG.md) de tal forma que copie automáticamente las Tareas Completas de [README.md](README.md).
 
 # Tareas completas
-- [x] Se corrije error donde [pausarNotificaciones.sh](scripts/pausarNotificaciones.sh) no cerraba nunca la notificación que se mostraba al reactivar las notificaciones.
- 
+- [x] Se añade `wl-clipboard` a [paquetes.nix](nixos/paquetes.nix) y se configura atajo del teclado en [hyprland.nix](nixos/dotFiles/hyprland.nix) para que al tomar una captura de pantalla, esta quede en el clipboard.
+  
 Para ver todos los cambios, ir a [CHANGELOG.md](CHANGELOG.md)
