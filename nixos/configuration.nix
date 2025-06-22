@@ -23,7 +23,7 @@
     ];
 
 
-  boot.initrd.luks.devices."luks-77acf25a-628b-4aed-9358-99201396532e".device = "/dev/disk/by-uuid/77acf25a-628b-4aed-9358-99201396532e";
+  boot.initrd.luks.devices."luks-1eff66b8-c41c-42a7-9763-ed8fd5e9cea3".device = "/dev/disk/by-uuid/1eff66b8-c41c-42a7-9763-ed8fd5e9cea3";
 	nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # This value determines the NixOS release from which the default

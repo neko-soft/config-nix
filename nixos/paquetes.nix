@@ -110,7 +110,7 @@
 	hardware.amdgpu.opencl.enable = true;
 	programs.steam.enable = true;
 	programs.obs-studio.enable = true;
-	programs.firefox.enable = true;
+	#programs.firefox.enable = true;
 
 	services.udisks2.enable = true;
 	services.dbus.enable = true;

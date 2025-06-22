@@ -77,6 +77,27 @@ in
         wayland.windowManager.hyprland.systemd.variables = ["--all"];
 
 
+	programs.firefox = {
+		enable = true;
+		languagePacks = ["es-CL" "en-US"];
+		policies = {
+			DefaultDownloadDirectory = "\${home}";
+			DisablePocket = true;
+			DisableTelemetry = true;
+		};
+	};
+
+	#programs.thunderbird = {
+	#	enable = true;
+	#	profiles.neko = {
+	#		accountsOrder 
+	#	};
+	#};
+
+	programs.vscode = {
+		enable = true;
+	};
+
         programs.git = {
           enable = true;
           userName = "neko-soft";    # Cambia esto por tu nombre

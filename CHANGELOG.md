@@ -1,3 +1,6 @@
+# 2025-06-21
+- [x] Se agrega `firefox` y su configuración de forma declarativa en [homeManager.nix](nixos/homeManager.nix).
+
 # 2025-06-19
 - [x] Se corrije error donde [pausarNotificaciones.sh](scripts/pausarNotificaciones.sh) no cerraba nunca la notificación que se mostraba al reactivar las notificaciones.
 

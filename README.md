@@ -3,7 +3,6 @@
 En este repo se encuentra la configuración de mi sistema NixOS personal.
 
 
-
 # Tareas pendientes
 
 - [ ] Arreglar [README.md](README.md), explicando todo con más detalle, especialmente los [scripts](scripts/). También incluir los atajos de teclado que se usan en [hyprland.nix](nixos/dotFiles/hyprland.nix).
@@ -21,10 +20,11 @@ En este repo se encuentra la configuración de mi sistema NixOS personal.
     - [ ] spotify-player
     - [ ] VS Code
     - [ ] Neovim
+    - [ ] Firefox
 - [ ] Configurar bien los overrides de `catppuccin-sddm` y `catpuccin-grub`.
 - [ ] Automatizar cambios del [CHANGELOG.md](CHANGELOG.md) de tal forma que copie automáticamente las Tareas Completas de [README.md](README.md).
 
 # Tareas completas
-- [x] Se añade `wl-clipboard` a [paquetes.nix](nixos/paquetes.nix) y se configura atajo del teclado en [hyprland.nix](nixos/dotFiles/hyprland.nix) para que al tomar una captura de pantalla, esta quede en el clipboard.
+- [x] Se agrega `firefox` y su configuración de forma declarativa en [homeManager.nix](nixos/homeManager.nix).
   
 Para ver todos los cambios, ir a [CHANGELOG.md](CHANGELOG.md)

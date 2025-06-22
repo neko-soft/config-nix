@@ -181,6 +181,7 @@ wayland.windowManager.hyprland = {
       		"workspace special:spotify silent, class:^(Spotify)$"
 		"workspace special:obsidian silent, class:^(obsidian)$"
 		"workspace special:mail silent, class:^(thunderbird)$"
+		"workspace special:discord silent, class:^(discord)$"
 		#"workspace 11 silent, class:^(kitty)$, title:^(cmatrix)$"
 		#"workspace 11 silent, title:^(asciiquarium)$"
 		"workspace 12 silent, class:^(org.qbittorrent.qBittorrent)$"
