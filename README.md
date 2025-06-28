@@ -25,6 +25,8 @@ En este repo se encuentra la configuración de mi sistema NixOS personal.
 - [ ] Automatizar cambios del [CHANGELOG.md](CHANGELOG.md) de tal forma que copie automáticamente las Tareas Completas de [README.md](README.md).
 
 # Tareas completas
-- [x] Se agrega `firefox` y su configuración de forma declarativa en [homeManager.nix](nixos/homeManager.nix).
+- [x] La curva de temperatura del script [ventiladores.sh](scripts/ventiladores.sh) ha sido modificada para evitar cambios constantes de la velocidad del ventilador.
+- [x] Se modifica el módulo `temperature` en [waybar.nix](nixos/dotFiles/waybar.nix) de modo que el umbral crítico ahora es 88 °C o mayor.
+- [x] La notificación de [temperaturaCpu.sh](scripts/temperaturaCpu.sh) ahora se activa para valores de 95 °C o más.
   
 Para ver todos los cambios, ir a [CHANGELOG.md](CHANGELOG.md)

@@ -60,18 +60,18 @@ while true; do
     target_fan_hex=""
     target_upper_threshold=0 # El umbral de temperatura superior para esta velocidad objetivo
 
-    if [ "$TEMP_C" -lt 40 ]; then
+    if [ "$TEMP_C" -lt 70 ]; then
         target_fan_hex="16"
         target_upper_threshold=40 # El ventilador debería subir a 0B a 40°C
-    elif [ "$TEMP_C" -lt 60 ]; then
-        target_fan_hex="1b"
-        target_upper_threshold=60 # El ventilador debería subir a 1B a 55°C
     elif [ "$TEMP_C" -lt 80 ]; then
+        target_fan_hex="1b"
+        target_upper_threshold=80 # El ventilador debería subir a 1B a 55°C
+    elif [ "$TEMP_C" -lt 88 ]; then
         target_fan_hex="20"
-        target_upper_threshold=80 # El ventilador debería subir a 26 a 70°C
-    elif [ "$TEMP_C" -lt 90 ]; then
-        target_fan_hex="30"
-        target_upper_threshold=90 # El ventilador debería subir a 37 a 85°C
+        target_upper_threshold=88 # El ventilador debería subir a 26 a 70°C
+    elif [ "$TEMP_C" -lt 95 ]; then
+        target_fan_hex="2C"
+        target_upper_threshold=95 # El ventilador debería subir a 37 a 85°C
     else # Si la temperatura es 85°C o más
         target_fan_hex="37" # Poner ventiladores al máximo (5500 RPM)
         target_upper_threshold=1000 # Un valor muy alto, indica que ya estamos en el rango superior

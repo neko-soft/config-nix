@@ -23,7 +23,7 @@
 		#wofi
 		vlc
 		p7zip discord playerctl pywal
-		google-chrome
+		#google-chrome
 		librewolf
 		bibata-cursors
 		exfat

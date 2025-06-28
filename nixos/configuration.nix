@@ -23,7 +23,7 @@
     ];
 
 
-  boot.initrd.luks.devices."luks-1eff66b8-c41c-42a7-9763-ed8fd5e9cea3".device = "/dev/disk/by-uuid/1eff66b8-c41c-42a7-9763-ed8fd5e9cea3";
+  boot.initrd.luks.devices."luks-18bff726-7ece-46a2-850f-937dca861369".device = "/dev/disk/by-uuid/18bff726-7ece-46a2-850f-937dca861369";
 	nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # This value determines the NixOS release from which the default
@@ -33,7 +33,7 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system = {
-    stateVersion = "25.05"; # Did you read the comment?
+      stateVersion = "25.05"; # Did you read the comment?
 	autoUpgrade = {
 		enable = true;
 		allowReboot = false;

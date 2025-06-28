@@ -1,3 +1,8 @@
+# 2025-06-28
+- [x] La curva de temperatura del script [ventiladores.sh](scripts/ventiladores.sh) ha sido modificada para evitar cambios constantes de la velocidad del ventilador.
+- [x] Se modifica el módulo `temperature` en [waybar.nix](nixos/dotFiles/waybar.nix) de modo que el umbral crítico ahora es 88 °C o mayor.
+- [x] La notificación de [temperaturaCpu.sh](scripts/temperaturaCpu.sh) ahora se activa para valores de 95 °C o más.
+
 # 2025-06-21
 - [x] Se agrega `firefox` y su configuración de forma declarativa en [homeManager.nix](nixos/homeManager.nix).
 

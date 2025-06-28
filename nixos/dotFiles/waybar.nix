@@ -132,7 +132,7 @@ programs.waybar = {
           "/sys/class/hwmon/hwmon7/temp1_input"
           "/sys/class/thermal/thermal_zone0/temp"
         ];
-        critical-threshold = 80;
+        critical-threshold = 88;
         format-critical = "{temperatureC}°C   ";
         format = "{temperatureC}°C {icon}";
         format-icons = ["" "" "" ""];

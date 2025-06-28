@@ -16,7 +16,7 @@ while true; do
         exit 1
     fi
 
-    if (( temp >= 90 )); then
+    if (( temp >= 95 )); then
         dunstify -u normal -r "$NOTIFY_ID" -i "dialog-warning" \
             "🔥 CPU HIRVIENDO: $temp °C 🔥" \
             "🥵 El procesador está muy caliente 🥵"
