@@ -28,7 +28,7 @@
 		};
 		displayManager = {
 			sddm.enable = false;
-			sddm.theme = "catppuccin-mocha";
+			#sddm.theme = "catppuccin-mocha";
 			#sddm.package = pkgs.kdePackages.sddm;
 		};
 		desktopManager.plasma6.enable = false;

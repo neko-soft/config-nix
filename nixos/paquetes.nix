@@ -31,12 +31,14 @@
 		gnome-calculator
 		spotify-player
 		#bluez
+		gallery-dl
 		parabolic
 		mission-center
 		cameractrls
 		easyeffects
 		pavucontrol
 		wl-clipboard
+		moonlight-qt
 		catppuccin-grub
 		#catppuccin-sddm
   		#catppuccin-sddm.override {
@@ -50,7 +52,8 @@
 		htop killall vnstat iftop
 
 		# Programas Creativos		
-		#reaper davinci-resolve krita
+		#reaper davinci-resolve 
+		#krita
 		#davinci-resolve
 
 		# Terminal y Kitty
@@ -115,6 +118,7 @@
 	services.udisks2.enable = true;
 	services.dbus.enable = true;
 	services.gvfs.enable = true;
+
 
 	nix.gc = {
 		automatic = true;

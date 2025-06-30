@@ -52,6 +52,19 @@ in
     		size = 24;
   	};
 
+# in home.nix
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+    plugins = with pkgs.vimPlugins; [
+      #nvim-tree-lua
+      nvim-treesitter
+      elixir-tools-nvim
+      nvchad-ui
+      catppuccin-nvim
+    ];
+  };
+
       gtk = {
     	enable = true;
 
